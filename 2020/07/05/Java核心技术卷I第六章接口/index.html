@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java核心技术卷I第六章接口、lambda表达式、内部类 | 嘤嘤嘤</title>
+  <title>Java核心技术卷I第六章接口 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,20 +25,20 @@
     }
   </style>
   
-  <meta name="description" content="接口、lambda表达式、内部类">
+  <meta name="description" content="接口">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java核心技术卷I第六章接口、lambda表达式、内部类">
-<meta property="og:url" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/index.html">
+<meta property="og:title" content="Java核心技术卷I第六章接口">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
-<meta property="og:description" content="接口、lambda表达式、内部类">
-<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/%E6%B5%85%E6%8B%B7%E8%B4%9D.png">
+<meta property="og:description" content="接口">
+<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%B5%85%E6%8B%B7%E8%B4%9D.png">
 <meta property="article:published_time" content="2020-07-05T14:29:17.000Z">
-<meta property="article:modified_time" content="2020-07-06T17:22:12.411Z">
+<meta property="article:modified_time" content="2020-07-07T02:14:12.200Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -178,19 +178,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java核心技术卷I第六章接口、lambda表达式、内部类" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java核心技术卷I第六章接口" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java核心技术卷I第六章接口、lambda表达式、内部类
+      Java核心技术卷I第六章接口
     </h1>
   
 
         
-        <a href="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
+        <a href="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
   	<time datetime="2020-07-05T14:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
 </a>
         
@@ -198,7 +198,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>接口、lambda表达式、内部类</p>
+        <p>接口</p>
 <a id="more"></a>
 
 <h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="接口概念"><a href="#接口概念" class="headerlink" title="接口概念"></a>接口概念</h3><ul>
@@ -228,12 +228,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T first,T second)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义类实现Comparator&lt;String&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LengthComparator</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String first,String second)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> first.length() - second.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实例比较</span></span><br><span class="line">LengthComparator lc = <span class="keyword">new</span> LengthComparator();</span><br><span class="line"><span class="keyword">if</span>(lc.compare(words[i],words[j])&gt;<span class="number">0</span>)...</span><br><span class="line"><span class="comment">//尽管LengthComparetor对象没有状态,不过还是需要建立这个对象的一个实例来调用compare方法.</span></span><br><span class="line"></span><br><span class="line">String[] friends =&#123;<span class="string">"Peter"</span>,<span class="string">"Mary"</span>,<span class="string">"Paul"</span>&#125;;</span><br><span class="line">Arrays.sort&#123;firends, <span class="keyword">new</span> LengthComparator()&#125;;</span><br><span class="line"><span class="comment">//结果可能为["Mary","Paul","Peter"]或者["Paul","Mary","Peter"]</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="对象克隆"><a href="#对象克隆" class="headerlink" title="对象克隆"></a>对象克隆</h3><p>一个包含对象引用的变量建立副本时,原变量和副本都是同一个对象的引用,如图6-1<br>如果拷贝对象中所有字段都是数值或者其他基本内省,拷贝没有任何问题,当如果对象包含子对象的引用,拷贝字段就会得到相同子对象的另一个引用</p>
-<img src="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png" class title="拷贝和克隆">
+<img src="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png" class title="拷贝和克隆">
 
 <ul>
 <li>clone方法时Object的一个protected方法</li>
 <li>只有Employee类可以克隆Employee对象</li>
-<li>默认的克隆操作时”浅拷贝”,并没有克隆对象中引用的其他对象<img src="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/%E6%B5%85%E6%8B%B7%E8%B4%9D.png" class title="This is an example image">
+<li>默认的克隆操作时”浅拷贝”,并没有克隆对象中引用的其他对象<img src="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%B5%85%E6%8B%B7%E8%B4%9D.png" class title="浅拷贝">
 
 </li>
 </ul>
@@ -254,7 +254,7 @@
 
 
 
-<h2 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h2><h3 id="lambda表达式语法"><a href="#lambda表达式语法" class="headerlink" title="lambda表达式语法"></a>lambda表达式语法</h3><h3 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h3><h3 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h3><h3 id="构造器引用"><a href="#构造器引用" class="headerlink" title="构造器引用"></a>构造器引用</h3><h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><h3 id="处理lambda表达式"><a href="#处理lambda表达式" class="headerlink" title="处理lambda表达式"></a>处理lambda表达式</h3><h3 id="再谈Comparator"><a href="#再谈Comparator" class="headerlink" title="再谈Comparator"></a>再谈Comparator</h3><h2 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h2><h3 id="使用内部类访问对象数据"><a href="#使用内部类访问对象数据" class="headerlink" title="使用内部类访问对象数据"></a>使用内部类访问对象数据</h3><h3 id="内部类的特殊语法规则"><a href="#内部类的特殊语法规则" class="headerlink" title="内部类的特殊语法规则"></a>内部类的特殊语法规则</h3><h3 id="内部类是否有用、必要、和安全"><a href="#内部类是否有用、必要、和安全" class="headerlink" title="内部类是否有用、必要、和安全"></a>内部类是否有用、必要、和安全</h3><h3 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h3><h3 id="由外部方法访问变量"><a href="#由外部方法访问变量" class="headerlink" title="由外部方法访问变量"></a>由外部方法访问变量</h3><h3 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h3><h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><h2 id="服务器加载"><a href="#服务器加载" class="headerlink" title="服务器加载"></a>服务器加载</h2><h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><h3 id="何时使用代理"><a href="#何时使用代理" class="headerlink" title="何时使用代理"></a>何时使用代理</h3><h3 id="创建代理对象"><a href="#创建代理对象" class="headerlink" title="创建代理对象"></a>创建代理对象</h3><h3 id="代理类的特性"><a href="#代理类的特性" class="headerlink" title="代理类的特性"></a>代理类的特性</h3>
+
       
 
       
@@ -344,7 +344,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -357,6 +357,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java核心技术卷I第六章lambda表达式
+        
+      </div>
+    </a>
   
   
     <a href="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
@@ -387,7 +396,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-number">1.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#接口概念"><span class="toc-number">1.1.</span> <span class="toc-text">接口概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口属性"><span class="toc-number">1.2.</span> <span class="toc-text">接口属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态和私有方法"><span class="toc-number">1.3.</span> <span class="toc-text">静态和私有方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认方法"><span class="toc-number">1.4.</span> <span class="toc-text">默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决默认方法冲突"><span class="toc-number">1.5.</span> <span class="toc-text">解决默认方法冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comparator接口"><span class="toc-number">1.6.</span> <span class="toc-text">Comparator接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象克隆"><span class="toc-number">1.7.</span> <span class="toc-text">对象克隆</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda表达式"><span class="toc-number">2.</span> <span class="toc-text">lambda表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda表达式语法"><span class="toc-number">2.1.</span> <span class="toc-text">lambda表达式语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数式接口"><span class="toc-number">2.2.</span> <span class="toc-text">函数式接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法引用"><span class="toc-number">2.3.</span> <span class="toc-text">方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造器引用"><span class="toc-number">2.4.</span> <span class="toc-text">构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">2.5.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理lambda表达式"><span class="toc-number">2.6.</span> <span class="toc-text">处理lambda表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再谈Comparator"><span class="toc-number">2.7.</span> <span class="toc-text">再谈Comparator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内部类"><span class="toc-number">3.</span> <span class="toc-text">内部类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用内部类访问对象数据"><span class="toc-number">3.1.</span> <span class="toc-text">使用内部类访问对象数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内部类的特殊语法规则"><span class="toc-number">3.2.</span> <span class="toc-text">内部类的特殊语法规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内部类是否有用、必要、和安全"><span class="toc-number">3.3.</span> <span class="toc-text">内部类是否有用、必要、和安全</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#局部内部类"><span class="toc-number">3.4.</span> <span class="toc-text">局部内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由外部方法访问变量"><span class="toc-number">3.5.</span> <span class="toc-text">由外部方法访问变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匿名内部类"><span class="toc-number">3.6.</span> <span class="toc-text">匿名内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态内部类"><span class="toc-number">3.7.</span> <span class="toc-text">静态内部类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器加载"><span class="toc-number">4.</span> <span class="toc-text">服务器加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代理"><span class="toc-number">5.</span> <span class="toc-text">代理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#何时使用代理"><span class="toc-number">5.1.</span> <span class="toc-text">何时使用代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建代理对象"><span class="toc-number">5.2.</span> <span class="toc-text">创建代理对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代理类的特性"><span class="toc-number">5.3.</span> <span class="toc-text">代理类的特性</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-number">1.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#接口概念"><span class="toc-number">1.1.</span> <span class="toc-text">接口概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口属性"><span class="toc-number">1.2.</span> <span class="toc-text">接口属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态和私有方法"><span class="toc-number">1.3.</span> <span class="toc-text">静态和私有方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认方法"><span class="toc-number">1.4.</span> <span class="toc-text">默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决默认方法冲突"><span class="toc-number">1.5.</span> <span class="toc-text">解决默认方法冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comparator接口"><span class="toc-number">1.6.</span> <span class="toc-text">Comparator接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象克隆"><span class="toc-number">1.7.</span> <span class="toc-text">对象克隆</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -510,11 +519,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+                <a href="javascript:void(0)" class="js-tag color5">书写规范</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">书写规范</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
             
             <div class="clearfix"></div>
