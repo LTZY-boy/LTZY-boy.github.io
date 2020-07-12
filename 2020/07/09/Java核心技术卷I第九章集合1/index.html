@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java核心技术卷I第九章Java集合框架 | 嘤嘤嘤</title>
+  <title>Java核心技术卷I第九章集合1 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -27,28 +27,28 @@
   
   <meta name="description" content="Java集合框架、集合框架中的类、集合框架中的接口、具体集合、映射">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java核心技术卷I第九章Java集合框架">
-<meta property="og:url" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:title" content="Java核心技术卷I第九章集合1">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
 <meta property="og:description" content="Java集合框架、集合框架中的类、集合框架中的接口、具体集合、映射">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%98%9F%E5%88%97.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8%E8%BF%AD%E4%BB%A3%E5%99%A8.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E7%9A%84%E6%8E%A5%E5%8F%A3.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E7%B1%BB.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%85%B7%E4%BD%93%E9%9B%86%E5%90%88.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E6%95%A3%E5%88%97%E8%A1%A8.png">
-<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E6%8E%A5%E6%95%A3%E5%88%97%E8%A1%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%98%9F%E5%88%97.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8%E8%BF%AD%E4%BB%A3%E5%99%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E7%9A%84%E6%8E%A5%E5%8F%A3.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E7%B1%BB.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%85%B7%E4%BD%93%E9%9B%86%E5%90%88.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E6%95%A3%E5%88%97%E8%A1%A8.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E6%8E%A5%E6%95%A3%E5%88%97%E8%A1%A8.png">
 <meta property="article:published_time" content="2020-07-09T03:35:06.000Z">
-<meta property="article:modified_time" content="2020-07-10T17:54:54.892Z">
+<meta property="article:modified_time" content="2020-07-11T07:38:03.007Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%98%9F%E5%88%97.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%98%9F%E5%88%97.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -190,19 +190,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java核心技术卷I第九章Java集合框架" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java核心技术卷I第九章集合1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java核心技术卷I第九章Java集合框架
+      Java核心技术卷I第九章集合1
     </h1>
   
 
         
-        <a href="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" class="archive-article-date">
+        <a href="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/" class="archive-article-date">
   	<time datetime="2020-07-09T03:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
 </a>
         
@@ -212,7 +212,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">4.7k字</span>
+      <span class="post-count">5.6k字</span>
     </span>
   </span>
 
@@ -221,7 +221,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">18分</span>
+      <span class="post-count">22分</span>
     </span>
   </span>
 </div>
@@ -242,12 +242,12 @@
 <li>队列接口指出可以在队列的尾部添加元素，在队列的头部删除元素，并且可以查找队列中元素的个数。</li>
 <li>使用:当收集对象时，按照”先进先出”方式检索对象时就应该使用队列</li>
 </ul>
-<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%98%9F%E5%88%97.png" class title="队列(queue)">
+<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%98%9F%E5%88%97.png" class title="队列(queue)">
 <p>队列接口的最简形式类似下列代码:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt;</span>&#123;  <span class="comment">//a simplified form of the interface in the standard library</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(E element)</span></span>;</span><br><span class="line">    <span class="function">E <span class="title">remove</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>队列的实现通常两种方式:1.循环数组、2.链表</li>
-<li>循环数组是一个有界集合,即容量有限.如果程序中要收集的对象没有上限,就最好使用链表来实现.<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0.png" class title="队列的实现">
+<li>循环数组是一个有界集合,即容量有限.如果程序中要收集的对象没有上限,就最好使用链表来实现.<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%98%9F%E5%88%97%E7%9A%84%E5%AE%9E%E7%8E%B0.png" class title="队列的实现">
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CircularArrayQueue</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt;</span>&#123; <span class="comment">//不是java类库中的类</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> head;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> tail;</span><br><span class="line">    CircularArrayQueue(<span class="keyword">int</span> capacity)&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(E element)</span></span>&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">remove</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">    <span class="keyword">private</span> E[] elements;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkdeListQueue</span>&lt;<span class="title">E</span>&gt; <span class="keyword">implements</span> <span class="title">Queue</span>&lt;<span class="title">E</span>&gt;</span>&#123; <span class="comment">//不是java类库中的类</span></span><br><span class="line">    <span class="keyword">private</span> Link head;</span><br><span class="line">    <span class="keyword">private</span> Link tail;</span><br><span class="line"></span><br><span class="line">    LinkdeListQueue(E element)&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(E element)</span></span>&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">remove</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
@@ -264,28 +264,28 @@
 <li>next() 反复调用next方法可以逐个访问集合中的元素.(如果到了集合的末尾,next方法将抛出NoSuchElementException)</li>
 <li>hasNext() 如果集合还有可访问的元素,即返回true<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Collection&lt;String&gt; c =...;</span><br><span class="line">Iterator&lt;String&gt; iter = c.iterator();</span><br><span class="line"><span class="keyword">while</span>(iter.HasNext())&#123;</span><br><span class="line">    String element = iter.next();</span><br><span class="line">    <span class="keyword">do</span> something with element</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for-each 可以简练执行同样的操作(for-each可以处理实现了iterator接口的对象)</span></span><br><span class="line"><span class="keyword">for</span>(String element : c)&#123;</span><br><span class="line">    <span class="keyword">do</span> something with element</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//编译器将将for-each 转换为带有迭代器的循环</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iterator</span>&lt;<span class="title">E</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function">Iterator&lt;E&gt; <span class="title">iterator</span><span class="params">()</span></span>;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以不写循环,而调用forEachRemainging方法</span></span><br><span class="line">forEachRemaining(element -&gt; <span class="keyword">do</span> something with element)</span><br></pre></td></tr></table></figure>
 next()和remove()之间存在依赖性(如果在remove之前没有调用next是不合法的,会抛出IllegalStateException)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果想商储两个相邻的元素,不能这样</span></span><br><span class="line">it.remove()</span><br><span class="line">it.remove() <span class="comment">// error</span></span><br><span class="line"><span class="comment">//必须调用next越过将要删除的元素</span></span><br><span class="line">it.remove();</span><br><span class="line">it.next();</span><br><span class="line">it.remove(); <span class="comment">//OK</span></span><br></pre></td></tr></table></figure>
-迭代器中,查找一个元素的唯一方法是调用next,而在执行查找操作的同时,迭代器的位置就会随之移动<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8%E8%BF%AD%E4%BB%A3%E5%99%A8.png" class title="向前移动迭代器">
+迭代器中,查找一个元素的唯一方法是调用next,而在执行查找操作的同时,迭代器的位置就会随之移动<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%90%91%E5%89%8D%E7%A7%BB%E5%8A%A8%E8%BF%AD%E4%BB%A3%E5%99%A8.png" class title="向前移动迭代器">
 
 </li>
 </ul>
 <h2 id="集合框架中的接口"><a href="#集合框架中的接口" class="headerlink" title="集合框架中的接口"></a>集合框架中的接口</h2><p>集合有两个基本接口:Colleaction和Map</p>
-<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E7%9A%84%E6%8E%A5%E5%8F%A3.png" class title="集合框架的接口">
+<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E7%9A%84%E6%8E%A5%E5%8F%A3.png" class title="集合框架的接口">
 <ul>
 <li>1 有数组支持的有序集合可以快速的随机访问(get和set),因此适合使用List方法并提供一个整数索引来访问</li>
 <li>2 链表尽管也是有序，但是随机访问慢,最好使用迭代器来遍历</li>
 <li>3 set接口和Collection接口的方法签名是一样的 set接口可以允许编写只接受集的方法 集(set)的add方法不允许添加重复的元素</li>
 </ul>
-<h2 id="集合框架中的类"><a href="#集合框架中的类" class="headerlink" title="集合框架中的类"></a>集合框架中的类</h2><img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E7%B1%BB.png" class title="集合框架中的类">
+<h2 id="集合框架中的类"><a href="#集合框架中的类" class="headerlink" title="集合框架中的类"></a>集合框架中的类</h2><img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E4%B8%AD%E7%9A%84%E7%B1%BB.png" class title="集合框架中的类">
 
 <h2 id="具体集合"><a href="#具体集合" class="headerlink" title="具体集合"></a>具体集合</h2><p>下图省略了线程安全集合.在表中一Map结尾的类实现了Map接口,其余都实现了Colleaction接口</p>
-<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%85%B7%E4%BD%93%E9%9B%86%E5%90%88.png" class title="具体集合">
+<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%85%B7%E4%BD%93%E9%9B%86%E5%90%88.png" class title="具体集合">
 
 <h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><ul>
 <li>使用列表的唯一理由: 尽可能减少在列表中键插入或删除元素的开销</li>
-<li>在Java中所有的链表 都是双向链表<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png" class title="双向链表"></li>
-<li>链表删除一个元素是很轻松的操作<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png" class title="从链表删除一个元素"></li>
-<li>链表添加一个元素<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0.png" class title="从链表添加一个元素"></li>
-<li>数组中删除一个元素对比一哈————————————————————————————————<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png" class title="从数组删除一个元素">
+<li>在Java中所有的链表 都是双向链表<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png" class title="双向链表"></li>
+<li>链表删除一个元素是很轻松的操作<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E8%A1%A8%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png" class title="从链表删除一个元素"></li>
+<li>链表添加一个元素<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E8%A1%A8%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0.png" class title="从链表添加一个元素"></li>
+<li>数组中删除一个元素对比一哈————————————————————————————————<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E6%95%B0%E7%BB%84%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0.png" class title="从数组删除一个元素">
 
 
 </li>
@@ -297,7 +297,7 @@ next()和remove()之间存在依赖性(如果在remove之前没有调用next是�
 </ul>
 <p>ArrayList分装了一个动态再分配的对象数组</p>
 <h3 id="散列集"><a href="#散列集" class="headerlink" title="散列集"></a>散列集</h3><p>在Java中,散列表(hash table)用<em>链表数组</em>实现,每个列表被称为桶(bucket)</p>
-<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E6%95%A3%E5%88%97%E8%A1%A8.png" class title="散列表">
+<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E6%95%A3%E5%88%97%E8%A1%A8.png" class title="散列表">
 <ul>
 <li>散列码: 由对象的实例字段得出的一个整数(不同数据的对象产生不同散列码)</li>
 <li>查找表中对象的位置: 先计算它的散列码,然后与桶的总数取余,得到结果就是保存这个元素的桶的索引<br>例如: 某个对象的散列码为76268,并且有128个桶,那么这个对象应该保存在第108号桶中(因为76268%128余数是108)</li>
@@ -363,8 +363,8 @@ API<figure class="highlight java"><table><tr><td class="gutter"><pre><span class
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">K <span class="title">getKey</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">V <span class="title">getValue</span><span class="params">()</span>  <span class="comment">//返回这个映射条目的键或值</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">V <span class="title">setValue</span><span class="params">()</span>  <span class="comment">//将相关映射中的值改为新值,并返回原来的值</span></span></span><br></pre></td></tr></table></figure>
 <h3 id="弱散列映射"><a href="#弱散列映射" class="headerlink" title="弱散列映射"></a>弱散列映射</h3><p>WeakHashMap,当对键的唯一引用来自散列表映射条目时,这个数据结构将与垃圾回收器协同工作一起删除键/值对.<br>工作原理:WeakHashMap使用弱引用(weak references)保存键.<br>WeakReference对象将包含另一个对象的引用,在这里就是一个散列表键.对于这种类型的对象,垃圾回收器采用一种特有的方式进行处理.正常情况下,如果垃圾回收器发现某个特定的对象已经没有他人应用就将其回收.但如果某个对象只能由WeaKReferencey引用,垃圾回收器也将他回收,但会将引用这个对象的弱引用放入一个队列WeakHashMap将周期性地检查队列,以便找出新添加的弱引用一个弱引用进入队列意味着这个键不在被他人使用,并且已经回收,于是WeakHashMap将删除相关联的映射条目</p>
 <h3 id="链接散列集与映射"><a href="#链接散列集与映射" class="headerlink" title="链接散列集与映射"></a>链接散列集与映射</h3><p>LinkHashSet和LinkHashMap类会记住插入元素项的顺序.在表中插入元素项时,就会并入到双向链表中</p>
-<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/%E9%93%BE%E6%8E%A5%E6%95%A3%E5%88%97%E8%A1%A8.png" class title="链接散列表">
-<p>或者,链接散列表可以使用访问顺序而不是擦汗如顺序来迭代初始映射条目.每次调用get和put时,收到影响的项将从当前的位置删除,而放到项链表的尾部(只影响项在链表中的位置,而散列表中桶不会受影响.映射条目总是在链散列码对应的桶中),要构建一个这样的散列映射,需要调用</p>
+<img src="/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/%E9%93%BE%E6%8E%A5%E6%95%A3%E5%88%97%E8%A1%A8.png" class title="链接散列表">
+<p>或者,链接散列表可以使用访问顺序而不是查询顺序来迭代初始映射条目.每次调用get和put时,收到影响的项将从当前的位置删除,而放到项链表的尾部(只影响项在链表中的位置,而散列表中桶不会受影响.映射条目总是在链散列码对应的桶中),要构建一个这样的散列映射,需要调用</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LinkHshMap&lt;K,V&gt;(initialCapacity,loadFactor,<span class="keyword">true</span>)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>访问顺序对于实现缓存的”最近最少使用”原则十分重要<br>例如:你希望将访问频率高的元素放在内存中,而访问频率低的元素从数据库中读取.但在表中找不到元素项而且表已经相当满时,可以得到表的一个迭代器,并删除它枚举的前几个元素.这些项时最近最少使用的几个元素<br>  甚至可以自动化该过程,构造一个LinkedHashMap的一个子类,然后覆盖下面这个方法:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">removeEldestEntry</span><span class="params">(Map.Entry&lt;K,V&gt; eldest)</span></span></span><br></pre></td></tr></table></figure>
@@ -372,7 +372,31 @@ API<figure class="highlight java"><table><tr><td class="gutter"><pre><span class
 
 </li>
 </ul>
-<h3 id="枚举集与映射"><a href="#枚举集与映射" class="headerlink" title="枚举集与映射"></a>枚举集与映射</h3><h3 id="标识散列映射"><a href="#标识散列映射" class="headerlink" title="标识散列映射"></a>标识散列映射</h3>
+<h3 id="枚举集与映射"><a href="#枚举集与映射" class="headerlink" title="枚举集与映射"></a>枚举集与映射</h3><ul>
+<li><p>EnumSet是一个枚举类型元素集的高效体现。由于枚举类型只有有限个实例，所有EnumSet内部用位序列实现。如果对应的值在集中，则相应位被置为1</p>
+</li>
+<li><p>EnumSet没有公共的构造器。使用静态工厂方法构造这个集：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Weekday &#123;MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY&#125;</span><br><span class="line">EnumSet&lt;Weekday&gt; always = EnumSet.allOf(Weekday<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">EnumSet&lt;Weekday&gt; never = EnumSet.noneof(Weekday<span class="class">.<span class="keyword">class</span>)</span>; </span><br><span class="line">EnumSet&lt;Weekday&gt; workday = EnumSet.range(Weekday.MONDAY,Weekday.FRIDAY);</span><br><span class="line">EnumSet&lt;Weekday&gt; mwf = EnumSet.of(Weekday.MONDAY,Weekday.WEDNESDAY,Weekday.FRIDAY);</span><br></pre></td></tr></table></figure></li>
+<li><p>可以使用set接口的常用方法来修改EnumSet</p>
+</li>
+<li><p>EnumMap是一个键类型为枚举类型的映射。可以直接且高效地实现一个值数组。需要在构造器中指定键类型<br><code>EnumMap&lt;Weekday,Employee&gt; personInCharge = new EnumMap&lt;&gt;(Weekday.class);</code></p>
+</li>
+<li><p>EnumSet的API中形如 E extends Enum<E>的类型参数,简单来说 “E是一个枚举类型”.所有枚举类型都扩展了泛型Enum类.例如:Weeday扩展了Enum<Weekday></Weekday></E></p>
+</li>
+</ul>
+<h3 id="标识散列映射"><a href="#标识散列映射" class="headerlink" title="标识散列映射"></a>标识散列映射</h3><ul>
+<li>类IdentityHashMap由特殊用途，在这个类中，键的散列值不是用hashCode函数计算值，而是用System.identityHashCode.这是Object.hashCode根据对象的内存地址计算散列码时所用的方法。并且比较两个对象时，IndentityHashMap类使用==，而不是用equals</li>
+<li>也就是说，不同的键对象即使内容相同，也会被视为不同的对象。在实现对象遍历算法(如对象串行化)时，这个类非常有用，可以用来跟踪那些对象已经遍历过<br>API<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">java.util.WeakHashMap&lt;K,V&gt; <span class="number">1.2</span></span><br><span class="line"></span><br><span class="line">WeakHashMap();</span><br><span class="line"></span><br><span class="line">WeakHashMap(<span class="keyword">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">WeakHashMap(omt initialCapacity,<span class="keyword">float</span> loadFactor);  <span class="comment">//用给定容量和填充因子构造一个空的散列映射</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">java.util.LinkedHashSet&lt;E&gt; <span class="number">1.4</span></span><br><span class="line"></span><br><span class="line">LinkedHashSet();</span><br><span class="line"></span><br><span class="line">LinkedHashSet(<span class="keyword">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">LinkedHashSet(<span class="keyword">int</span> initialCapacity,<span class="keyword">float</span> loadFactor);;  <span class="comment">//用给定的容量和填充因子构造一个空链接散列集</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">java.util.LinkedHashMap&lt;K,V&gt; <span class="number">1.4</span></span><br><span class="line"></span><br><span class="line">LinkedHashMap();</span><br><span class="line"></span><br><span class="line">LinkedhashMap(<span class="keyword">int</span> initialCapacity);</span><br><span class="line"></span><br><span class="line">LinkedHashMap(<span class="keyword">int</span> initialCapacity,<span class="keyword">float</span> loadFactor);</span><br><span class="line"></span><br><span class="line">LinkedhashMap(<span class="keyword">int</span> initialCapacity,<span class="keyword">float</span> loadFactor,<span class="keyword">boolean</span> accessOrder);<span class="comment">//accessOrder参数为true时表示访问顺序.为false表示插入顺序</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">removeEldestEntry</span><span class="params">(Map.Entry&lt;K,V&gt; eldest)</span></span>;<span class="comment">//如过想删除eldest元素,就要覆盖对象为true.eldest参数时预期可能删除的元素.</span></span><br><span class="line"><span class="comment">//这个方法想映射中添加一个元素之后调用.其默认实现会返回false.即在默认情况下,老元素不会被删除.不过,可以重新定义这个方法,以便有选择地返回true.</span></span><br><span class="line"><span class="comment">//例如,如果最老的元素符号一个条件,或者映射超过一定大小,则返回true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">java.util.EnumSet&lt;E extends Enum&lt;E&gt;&gt; <span class="number">5</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">allOf</span><span class="params">(Class&lt;E&gt; enumType)</span></span>; <span class="comment">//返回一个包含给定枚举类型迭代所有值的可变集</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">noneOf</span><span class="params">(Class&lt;E&gt; enumType)</span></span>; <span class="comment">//返回一个初始为空的可变集</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">range</span><span class="params">(E from,E to)</span></span>; <span class="comment">//返回一个包含from~to之间所有值(包括两个边界元素)的可变集</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">of</span> <span class="params">(E e)</span></span>;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">of</span><span class="params">(E e1,E e2,E e3,E e3,E e4,E e5)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;E extends Enum&lt;E&gt;&gt; <span class="function">EnumSet&lt;E&gt; <span class="title">of</span><span class="params">(E first,E... rest)</span></span>;<span class="comment">//返回不为null的给定元素的可变集</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java.util.EnumMap&lt;K extends Enum&lt;K&gt;,V&gt; <span class="number">5</span></span><br><span class="line"></span><br><span class="line">EnumMap(Class&lt;K&gt; keyType);  <span class="comment">//构建一个键为指定类型的空的可变映射</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">java.util.IdentityHashMap&lt;K,V&gt; <span class="number">1.4</span></span><br><span class="line"></span><br><span class="line">IdentityHashMap();</span><br><span class="line"></span><br><span class="line">IdentityHashMap(<span class="keyword">int</span> expectedMaxSize); <span class="comment">//构造一个空的标识散列映射集,其容量大于1.5*expectedMaxSize的2的最下幂值(expectedMaxSize的默认值是21)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java.lang.System <span class="number">1.0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">identityHashCode</span><span class="params">(Object obj)</span> 1.1</span></span><br><span class="line"><span class="function"><span class="comment">//返回Object.hashCode计算的相同散列码(根据对向的内存地址得出),及时obj所属的类已经重新定义了hashCode方法</span></span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -472,7 +496,7 @@ API<figure class="highlight java"><table><tr><td class="gutter"><pre><span class
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -485,6 +509,15 @@ API<figure class="highlight java"><table><tr><td class="gutter"><pre><span class
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/07/11/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%882/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java核心技术卷I第九章集合2
+        
+      </div>
+    </a>
   
   
     <a href="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%86%85%E9%83%A8%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
@@ -635,6 +668,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
