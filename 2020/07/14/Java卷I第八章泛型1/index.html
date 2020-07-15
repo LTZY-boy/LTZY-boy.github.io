@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: java基础 | 嘤嘤嘤</title>
+  <title>Java卷I第八章泛型1 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,11 +25,16 @@
     }
   </style>
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="嘤嘤嘤">
-<meta property="og:url" content="http://yoursite.com/tags/java%E5%9F%BA%E7%A1%80/index.html">
+  <meta name="description" content="泛型程序设计优势、限制与局限性、泛型类型的继承规则、通配符类型、反射和泛型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java卷I第八章泛型1">
+<meta property="og:url" content="http://yoursite.com/2020/07/14/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B1/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
+<meta property="og:description" content="泛型程序设计优势、限制与局限性、泛型类型的继承规则、通配符类型、反射和泛型">
+<meta property="article:published_time" content="2020-07-14T01:19:17.000Z">
+<meta property="article:modified_time" content="2020-07-15T08:46:47.143Z">
 <meta property="article:author" content="LTZY">
+<meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
@@ -172,74 +177,137 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Java卷I第八章泛型1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/15/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B2/" class="archive-article-date">
-  	<time datetime="2020-07-15T02:37:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/15/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B2/">Java卷I第八章泛型2</a>
+    <h1 class="article-title" itemprop="name">
+      Java卷I第八章泛型1
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/14/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B1/" class="archive-article-date">
+        
+        <a href="/2020/07/14/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B1/" class="archive-article-date">
   	<time datetime="2020-07-14T01:19:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/14/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B1/">Java卷I第八章泛型1</a>
-    </h1>
-  
+        
+        
+          <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">1.8k字</span>
+    </span>
+  </span>
 
-        <div class="article-info info-on-right">
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">7分</span>
+    </span>
+  </span>
+</div>
+
           
+
+        
+ 
+      </header>
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>泛型程序设计优势、限制与局限性、泛型类型的继承规则、通配符类型、反射和泛型</p>
+<a id="more"></a>
+
+<h2 id="泛型程序设计优势"><a href="#泛型程序设计优势" class="headerlink" title="泛型程序设计优势"></a>泛型程序设计优势</h2><p>泛型程序(generic programming)的设计意味着编写的代码可以对多种不同类型的对象重用。</p>
+<ul>
+<li>虚拟机种没有泛型，只有普通的类和方法</li>
+<li>所有的类型参数都会替换为它们的限定类型</li>
+<li>会合成桥方法来保持多态</li>
+<li>为保持类型安全性，必要时会插入强制类型转换 <h2 id="简单定义泛型类"><a href="#简单定义泛型类" class="headerlink" title="简单定义泛型类"></a>简单定义泛型类</h2></li>
+<li>定义:泛型类(generic class)就是有一个或多个变量的类</li>
+<li>通常类型变量使用大写字母,简短.Java库使用变量E表示集合的元素类型,K和V表示键和值的类型,T、U、S表示任意类型<br>定义泛型类Pari类:<br><code>public class Pair&lt;T,U&gt;{...}</code><br>类型变量在整个类定义中用于指定方法的返回类型以及字段和局部变量的类型,例如:<br><code>private T first;</code></li>
+</ul>
+<p>例子:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span>&lt;<span class="title">T</span>&gt; </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> T first;</span><br><span class="line">   <span class="keyword">private</span> T second;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123; first = <span class="keyword">null</span>; second = <span class="keyword">null</span>; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(T first, T second)</span> </span>&#123; <span class="keyword">this</span>.first = first;  <span class="keyword">this</span>.second = second; &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> T <span class="title">getFirst</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> first; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> T <span class="title">getSecond</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> second; &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFirst</span><span class="params">(T newValue)</span> </span>&#123; first = newValue; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(T newValue)</span> </span>&#123; second = newValue; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PairTest1</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      String[] words = &#123; <span class="string">"Mary"</span>, <span class="string">"had"</span>, <span class="string">"a"</span>, <span class="string">"little"</span>, <span class="string">"lamb"</span> &#125;;</span><br><span class="line">      Pair&lt;String&gt; mm = ArrayAlg.minmax(words);</span><br><span class="line">      System.out.println(<span class="string">"min = "</span> + mm.getFirst());</span><br><span class="line">      System.out.println(<span class="string">"max = "</span> + mm.getSecond());</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArrayAlg</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Gets the minimum and maximum of an array of strings.</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> a an array of strings</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span> a pair with the min and max values, or null if a is null or empty</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Pair&lt;String&gt; <span class="title">minmax</span><span class="params">(String[] a)</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (a == <span class="keyword">null</span> || a.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">      String min = a[<span class="number">0</span>];</span><br><span class="line">      String max = a[<span class="number">0</span>];</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; a.length; i++)</span><br><span class="line">      &#123;</span><br><span class="line">         <span class="keyword">if</span> (min.compareTo(a[i]) &gt; <span class="number">0</span>) min = a[i];</span><br><span class="line">         <span class="keyword">if</span> (max.compareTo(a[i]) &lt; <span class="number">0</span>) max = a[i];</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">new</span> Pair&lt;&gt;(min, max);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//java中比较字符串的大小（compareTo方法的使用）https://blog.csdn.net/ymony/article/details/78289891</span></span><br><span class="line"><span class="comment">//结果</span></span><br><span class="line">min = Mary</span><br><span class="line">max = little</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><p>普通类中定义一个泛型方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArrayAlg</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; getMiddle(T...a)&#123;</span><br><span class="line">        <span class="keyword">return</span> a[a.length/<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调用一个泛型方法,可以把具体类型包括在&lt;&gt;中<br><code>String middle = ArrayAlg.&lt;String&gt;getMiddle(&quot;John&quot;,&quot;Q&quot;,&quot;Public&quot;);</code></li>
+<li>大多数情况下,可以省略&lt;&gt;中的参数类型<br><code>String middle = ArrayAlg.getMiddle(&quot;John&quot;,&quot;Q&quot;,&quot;Public&quot;);</code></li>
+<li>上述情况偶尔出错<br><code>double middle = ArrayAlg.getMiddle(3.14,1729,0);</code><br>错误提示:解释这个代码有两种方式,且都合法.编译器把参数自动装箱为1个Double和2个Integer对象,然后寻找这些类的共同超类.实际上找到了2个超类型:Number和Comparable接口,Comparable接口本身是一个泛型类.补救措施是将所有的参数都写为double值.<h2 id="泛型变量的限定"><a href="#泛型变量的限定" class="headerlink" title="泛型变量的限定"></a>泛型变量的限定</h2>一个类型变量或通配符可以有多个限定,例如:<br><code>T extends Comparble &amp; Serializable</code><br>在Java中继承中,可以有多个接口超类型,但最多一个限定可以是类.<br>且有类有一个类作为限定,它必须是限定列表中第一个限定</li>
+</ul>
+<h2 id="泛型代码和虚拟机"><a href="#泛型代码和虚拟机" class="headerlink" title="泛型代码和虚拟机"></a>泛型代码和虚拟机</h2><p>虚拟机没有泛型类型对象—-所有对象都属于普通类</p>
+<h3 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h3><p>无论何时顶一个泛型类型.都会自动提供一个相应的原始类型(raw type).这个原始类型的名字就是去掉类型参数后的泛型类别名.类型变量会被擦除(erased),并替换为限定类型(无限定的变量替换为Object)</p>
+<p>例1:T是无限定的变量,直接用Object代替,结果是一个普通类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pair</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">   <span class="keyword">private</span> Object first;</span><br><span class="line">   <span class="keyword">private</span> Object second;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">()</span> </span>&#123; first = <span class="keyword">null</span>; second = <span class="keyword">null</span>; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="title">Pair</span><span class="params">(Object first, Object second)</span> </span>&#123; <span class="keyword">this</span>.first = first;  <span class="keyword">this</span>.second = second; &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> Object <span class="title">getFirst</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> first; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> Object <span class="title">getSecond</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> second; &#125;</span><br><span class="line"></span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFirst</span><span class="params">(Object newValue)</span> </span>&#123; first = newValue; &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(Object newValue)</span> </span>&#123; second = newValue; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例2:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Intervalz</span>&lt;<span class="title">T</span> <span class="title">exntends</span> <span class="title">Comparable</span> &amp; <span class="title">Serializable</span>&gt; <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> T lower;</span><br><span class="line">    <span class="keyword">private</span> T upper;</span><br><span class="line">    ...</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Interval</span><span class="params">(T first,T second)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(first.compareTo(second) &lt;= <span class="number">0</span>)</span><br><span class="line">            &#123;lower = first;upper = second;&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            lower = second;upper = first;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//原始类型Interval如下</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Interval</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> Comparable lower;</span><br><span class="line">    <span class="keyword">private</span> Comparable upper;</span><br><span class="line">    ...</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Interval</span><span class="params">(Comparable first,Comparable second)</span></span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="转换泛型表达式"><a href="#转换泛型表达式" class="headerlink" title="转换泛型表达式"></a>转换泛型表达式</h3><p>编写一个泛型方法调用时,如果擦除了返回类型,编译器会插入强制类型转换.例如:<br><code>Pair&lt;Employeee&gt; buddies =...;</code><br><code>Employee buddy = buddies.getFirst();</code><br>getFirst擦除类型后的返回类型是Object.编译器自动插入转换到Employee的强制类型转换.也就是说,编译器把这个方法调用转换为两条虚拟机指令:</p>
+<ul>
+<li>1 对原始方法Pair.getFirst的调用</li>
+<li>2 将返回的Object类强制类型转换为Employee类型<br>访问一个泛型字段时也要插入强制类型转换.<br>假设Pair类的first和second字段都是公共的.表示式:<br><code>Employee buddy = buddies.first;</code><br>会在结果字节码中插入强制类型转换</li>
+</ul>
+<h3 id="转换泛型方法"><a href="#转换泛型方法" class="headerlink" title="转换泛型方法"></a>转换泛型方法</h3><h3 id="例："><a href="#例：" class="headerlink" title="例："></a>例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DateInterval</span> <span class="keyword">extends</span> <span class="title">Pair</span>  </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(LocalDate second)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(second.compareTo(getFirst()) &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">super</span>.setSecond(second);</span><br><span class="line">        &#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>日期区间是一个对LocalDate对象,而且我们需要覆盖这个方法来确保第二个值永远不小于第一个值.这个类擦除后变成</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DateInterval</span> <span class="keyword">extends</span> <span class="title">Pair</span>   //<span class="title">after</span> <span class="title">erasure</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSecond</span><span class="params">(LocalDate second)</span></span>&#123;...&#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有一个从Pari继承的setSecond方法,即<br><code>public void setSecond(Object second)</code><br>这是一个不同的方法,因为它有一个不同类型的参数–Object,而不是LocalDate.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> interval = <span class="keyword">new</span> DateInterval(...);</span><br><span class="line">Pair&lt;LocalDate&gt; pair = interval;   <span class="comment">//OK--assignment to superclass</span></span><br><span class="line">pair.setSecond(aDate);</span><br></pre></td></tr></table></figure>
+<p><strong>桥方法</strong><br>问题在于类型擦除和多态发生了冲突.此时,编译器在DateInterval类种生成一个桥方法(bridge method):<br><code>public void setSecond(Object second){setSecond((LocalDate) second);}</code><br>为什么可行?<br><code>pair.setSecond(aDate)</code><br>变量pair已经声明为类型Pair<LocalDate>,并且这个类型只有一个名为setSecond的方法,即setSecond(Object).虚拟机在pair引用的对象上调用这个方法.这个对象是DateInterval类型,因而将带调用DateInterval.setSecond(Object)方法.这个方法是合成的桥方法.它会调用DateInterval.setSecond(LocalDate),这正是我们想要的</LocalDate></p>
+<h3 id="调用遗留代码"><a href="#调用遗留代码" class="headerlink" title="调用遗留代码"></a>调用遗留代码</h3><p>例子:没有参数类型的Dictionary是一个原始类型,这里就存在兼容性问题<br>Swing用户界面工具包提供一个JSlider类,它的”刻度”可以定制为包含文本或图像的标签.这些标签用以下设置调用<br><code>void setLabelTable(Dictionary table)</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dictionary&lt;Integer,Component&gt; labelTable = <span class="keyword">new</span> Hashtable&lt;&gt;();</span><br><span class="line">labelTable.put(<span class="number">0</span>,<span class="keyword">new</span> JLabel(<span class="keyword">new</span> ImageIcon(<span class="string">"nin.gif"</span>)));</span><br><span class="line">labelTable.put(<span class="number">20</span>,<span class="keyword">new</span> JLabel(<span class="keyword">new</span> ImageIcon(<span class="string">"ten.gif"</span>)));</span><br></pre></td></tr></table></figure>
+<p>将Dictionary&lt;Integer,Component&gt;对象传递给setLabelTable时,编译器会发出一个警告<br><code>slider.setLabelTable(labelTable);  //warning</code><br>编译器无法确定setLabelTable可能会对Dictionary对象做什么,这个方法可能会把字典的所有键替换为字符串.这就打破了键类型必须为Integer的承诺.未来的操作可能导致糟糕的强制类型转换异常.<br>但是JSlider只读取这个信息可用主界(annotation)消除警告    </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SuppressWarnings</span>(<span class="string">"unchecked"</span>)</span><br><span class="line">Dictionary&lt;Integer,Component&gt; labelTable = slider.getLabelTable;  <span class="comment">//no warning</span></span><br><span class="line"><span class="comment">//或者对整个方法加注解</span></span><br><span class="line"><span class="meta">@SuppressWarings</span>(<span class="string">"unchecked"</span>f)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">configureSlider</span><span class="params">()</span></span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>这个注解会关闭方法种所有代码的检查</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝收款.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信收款.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -251,247 +319,128 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/14/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/11/Java%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%882/" class="archive-article-date">
-  	<time datetime="2020-07-11T07:39:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-11</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/07/15/Java%E5%8D%B7I%E7%AC%AC%E5%85%AB%E7%AB%A0%E6%B3%9B%E5%9E%8B2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java卷I第八章泛型2
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/07/11/Java%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%882/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java卷I第九章集合2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/11/Java%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%882/">Java卷I第九章集合2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型程序设计优势"><span class="toc-number">1.</span> <span class="toc-text">泛型程序设计优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单定义泛型类"><span class="toc-number">2.</span> <span class="toc-text">简单定义泛型类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型方法"><span class="toc-number">3.</span> <span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型变量的限定"><span class="toc-number">4.</span> <span class="toc-text">泛型变量的限定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型代码和虚拟机"><span class="toc-number">5.</span> <span class="toc-text">泛型代码和虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#类型擦除"><span class="toc-number">5.1.</span> <span class="toc-text">类型擦除</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换泛型表达式"><span class="toc-number">5.2.</span> <span class="toc-text">转换泛型表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#转换泛型方法"><span class="toc-number">5.3.</span> <span class="toc-text">转换泛型方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#例："><span class="toc-number">5.4.</span> <span class="toc-text">例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调用遗留代码"><span class="toc-number">5.5.</span> <span class="toc-text">调用遗留代码</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/09/Java%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/" class="archive-article-date">
-  	<time datetime="2020-07-09T03:35:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/09/Java%E5%8D%B7I%E7%AC%AC%E4%B9%9D%E7%AB%A0%E9%9B%86%E5%90%881/">Java卷I第九章集合1</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%86%85%E9%83%A8%E7%B1%BB/" class="archive-article-date">
-  	<time datetime="2020-07-07T02:15:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%86%85%E9%83%A8%E7%B1%BB/">Java卷I第六章内部类</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-07-07T02:13:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">Java卷I第六章lambda表达式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
-  	<time datetime="2020-07-05T14:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/">Java卷I第六章接口</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-07-05T03:11:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/">Java卷I第五章继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -521,9 +470,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

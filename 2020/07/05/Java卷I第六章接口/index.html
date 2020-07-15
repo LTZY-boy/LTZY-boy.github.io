@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java核心技术卷I第六章lambda表达式 | 嘤嘤嘤</title>
+  <title>Java卷I第六章接口 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,20 +25,20 @@
     }
   </style>
   
-  <meta name="description" content="lambda表达式">
+  <meta name="description" content="接口">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java核心技术卷I第六章lambda表达式">
-<meta property="og:url" content="http://yoursite.com/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:title" content="Java卷I第六章接口">
+<meta property="og:url" content="http://yoursite.com/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
-<meta property="og:description" content="lambda表达式">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151111.jpg">
-<meta property="og:image" content="http://yoursite.com/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151200.jpg">
-<meta property="article:published_time" content="2020-07-07T02:13:12.000Z">
-<meta property="article:modified_time" content="2020-07-07T07:50:25.155Z">
+<meta property="og:description" content="接口">
+<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%B5%85%E6%8B%B7%E8%B4%9D.png">
+<meta property="article:published_time" content="2020-07-05T14:29:17.000Z">
+<meta property="article:modified_time" content="2020-07-14T01:15:39.287Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151111.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -180,20 +180,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java核心技术卷I第六章lambda表达式" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java卷I第六章接口" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java核心技术卷I第六章lambda表达式
+      Java卷I第六章接口
     </h1>
   
 
         
-        <a href="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-07-07T02:13:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-07</time>
+        <a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
+  	<time datetime="2020-07-05T14:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
 </a>
         
         
@@ -202,7 +202,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">1.9k字</span>
+      <span class="post-count">1.1k字</span>
     </span>
   </span>
 
@@ -211,7 +211,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">7分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -225,73 +225,62 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>lambda表达式</p>
+        <p>接口</p>
 <a id="more"></a>
-<h2 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h2><p>lambada表达式是一个可传递的代码块，可以在以后执行一次或多次</p>
-<h3 id="lambda表达式语法"><a href="#lambda表达式语法" class="headerlink" title="lambda表达式语法"></a>lambda表达式语法</h3><ul>
-<li>如果代码无法放在一个表达式中，把代码放在{}中,并显示包含return语句<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">(String first,String second) -&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (first.length() &lt; second.length())&#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(first.length &gt; second.length)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>lambda表达式没有参数,仍要提供(),类似无参方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">() -&gt; &#123;<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i &gt;= <span class="number">0</span>;i--) System.out.println(i);&#125;</span><br></pre></td></tr></table></figure></li>
-<li>如果可以推到出一个lambad表达式的值,则可以忽略类型<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Comparator&lt;String&gt; comp</span><br><span class="line">    = (fitst,second) <span class="comment">//same as (String first,String second)</span></span><br><span class="line">    -&gt; first.length() - seconde.length();</span><br></pre></td></tr></table></figure></li>
-<li>如果方法只有一个参数,而且参数类型可以推到得出,可以省略括号<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ActionListener listener = event -&gt;</span><br><span class="line">    System.out.println(<span class="string">"The time is"</span>+Instant.ofEpochMilli(event.getWhen()));</span><br><span class="line">    <span class="comment">// instead of (event) -&gt;...or(ActionEvent event) -&gt;...</span></span><br></pre></td></tr></table></figure></li>
-<li>lambda表达式的返回值类型会由上下文推导得出<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(String fitst,String second) -&gt; first.length() - second.length() <span class="comment">//可以在需要int类型结果的位置使用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="接口概念"><a href="#接口概念" class="headerlink" title="接口概念"></a>接口概念</h3><ul>
+<li>接口不是类，而是对希望符合这个接口的类的一组需求（所有的接口都是public）</li>
+</ul>
+<h3 id="接口属性"><a href="#接口属性" class="headerlink" title="接口属性"></a>接口属性</h3><ul>
+<li>接口不能实例化，但可以声明接口的变量<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x  = <span class="keyword">new</span> Comparable(...);<span class="comment">//error </span></span><br><span class="line">Comparable x; <span class="comment">//ok</span></span><br></pre></td></tr></table></figure></li>
+<li>可以使用instanceof检查一个对象是否实现了某个特定接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(anObject instancenof Comparable)&#123;...&#125;</span><br></pre></td></tr></table></figure></li>
+<li>接口中不能包含实例字段,但可以包含常量(常量一般大写)<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">double</span> SPEED_LIMIT <span class="number">95</span>; <span class="comment">// a public static final constant</span></span><br></pre></td></tr></table></figure></li>
+<li>接口中方法自动设置为public,接口中的字段总是public static final </li>
+<li>每个类只有一个超类,却可以实现多个接口</li>
+</ul>
+<h3 id="静态和私有方法"><a href="#静态和私有方法" class="headerlink" title="静态和私有方法"></a>静态和私有方法</h3><ul>
+<li>java 8 允许接口增加静态方法</li>
+<li>java 9 接口中方法可以是private,private方法可以是静态方法或实例方法</li>
+</ul>
+<h3 id="默认方法"><a href="#默认方法" class="headerlink" title="默认方法"></a>默认方法</h3><ul>
+<li>可为接口提供一个默认实现,用default标记方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Iterator</span>&lt;<span class="title">E</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">E <span class="title">next</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//可以被接口自己使用,与使用类中的静态方法一样</span></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">change1</span><span class="params">()</span></span>&#123;...&#125;;</span><br><span class="line">    <span class="comment">//可以被实现该接口的类使用</span></span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title">remove</span><span class="params">()</span></span>&#123; <span class="keyword">throw</span> <span class="keyword">new</span> UnsupportedOperationException(<span class="string">"remove"</span>)&#125;; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解决默认方法冲突"><a href="#解决默认方法冲突" class="headerlink" title="解决默认方法冲突"></a>解决默认方法冲突</h3></li>
+<li>1 超类优先<br>如果超类提供了一个具体方法,同名而且有相同参数类型的默认方法会被忽略</li>
+<li>2 接口冲突<br>如果一个类实现多个接口,其中一个接口提供了一个默认方法,另外一个接口提供了一个同名且参数类型(无论是否为默认参数)相同的方法,必须覆盖这个方法解决冲突.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getName</span><span class="params">()</span></span>&#123; <span class="keyword">return</span> <span class="string">""</span>;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Named</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getName</span><span class="params">()</span></span>&#123; <span class="keyword">return</span> getClass().getName()+<span class="string">"_"</span>+hashCode();&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在Student类中提供一个getName方法即可,在这个方法中,可以选择两个冲突方法的一个.</span></span><br><span class="line">Class Student implements Person,Named&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span></span>&#123; <span class="keyword">return</span> Person.<span class="keyword">super</span>.getName();&#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//但Named接口没有提供getName提供默认实现时</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Named</span></span>&#123;</span><br><span class="line">    <span class="function">String <span class="title">getName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//编译器仍会报错</span></span><br><span class="line"><span class="comment">//如果至少一个接口提供了一个实现,编译器就会报错</span></span><br></pre></td></tr></table></figure>
+
 
 </li>
 </ul>
-<h3 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h3><p><em>只有一个抽象方法*的接口,需要这种接口时,就可以提供一个lambda表达式.这种接口称为函数式接口(functional interface)<br>*实际上,Java中lambda表达式所能做的也只是转换函数式接口库</em></p>
+<h3 id="Comparator接口"><a href="#Comparator接口" class="headerlink" title="Comparator接口"></a>Comparator接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">java.util.Arrays</span><br><span class="line"><span class="comment">//根据指定的比较器引发的顺序对指定的对象数组进行排序。 </span></span><br><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(T[] a, Comparator&lt;? <span class="keyword">super</span> T&gt; c)</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparator</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compare</span><span class="params">(T first,T second)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义类实现Comparator&lt;String&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LengthComparator</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String first,String second)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> first.length() - second.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实例比较</span></span><br><span class="line">LengthComparator lc = <span class="keyword">new</span> LengthComparator();</span><br><span class="line"><span class="keyword">if</span>(lc.compare(words[i],words[j])&gt;<span class="number">0</span>)...</span><br><span class="line"><span class="comment">//尽管LengthComparetor对象没有状态,不过还是需要建立这个对象的一个实例来调用compare方法.</span></span><br><span class="line"></span><br><span class="line">String[] friends =&#123;<span class="string">"Peter"</span>,<span class="string">"Mary"</span>,<span class="string">"Paul"</span>&#125;;</span><br><span class="line">Arrays.sort&#123;firends, <span class="keyword">new</span> LengthComparator()&#125;;</span><br><span class="line"><span class="comment">//结果可能为["Mary","Paul","Peter"]或者["Paul","Mary","Peter"]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="对象克隆"><a href="#对象克隆" class="headerlink" title="对象克隆"></a>对象克隆</h3><p>一个包含对象引用的变量建立副本时,原变量和副本都是同一个对象的引用,如图6-1<br>如果拷贝对象中所有字段都是数值或者其他基本内省,拷贝没有任何问题,当如果对象包含子对象的引用,拷贝字段就会得到相同子对象的另一个引用</p>
+<img src="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%8B%B7%E8%B4%9D%E5%92%8C%E5%85%8B%E9%9A%86.png" class title="拷贝和克隆">
+
 <ul>
-<li>例1<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">java.util.Arrays</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">sort</span><span class="params">(T[] a, Comparator&lt;? <span class="keyword">super</span> T&gt; c)</span> </span></span><br><span class="line"><span class="function"><span class="comment">//根据指定的比较器引发的顺序对指定的对象数组进行排序。 </span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="comment">//使用Arrays.sort方法,它的第二个参数需要一个Comparator实例,Comparator就是只有一个方法的接口</span></span></span><br><span class="line"><span class="function">String[] words </span>=&#123;<span class="string">"aaa"</span>,<span class="string">"bb"</span>,<span class="string">"cccc"</span>&#125;;</span><br><span class="line">Arrays.sort(words,</span><br><span class="line">    (first,second) -&gt; first.length() - second.length();</span><br><span class="line">)</span><br><span class="line"><span class="comment">//在底层Array.sort方法会接收实现Comparator&lt;String&gt;的某个类的对象,在这个对象上调用compare方法会执行这个lambda表达式的体</span></span><br></pre></td></tr></table></figure></li>
-<li>例2 ActionListener接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Timer timer = <span class="keyword">new</span> Timer(<span class="number">1000</span>,event -&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">"At the tone, the time is"</span></span><br><span class="line">        + Instant.ofEpochMilli(event.getWhen());</span><br><span class="line">        Toolkit.getDefaultToolkit().keep();</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
-<li>例3 java.util.function中的Predivate接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Predivate</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">test</span><span class="params">(T t)</span></span>;</span><br><span class="line">    <span class="comment">//addtional default and static methos</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//ArrayList类中有一个removeIf方法,它的参数就是Predivate,这个接口专门用来传递lambda表达式,例如</span></span><br><span class="line">list.removeIf(e -&gt; e == <span class="keyword">null</span>); <span class="comment">//删除一个数组列表所有的null值</span></span><br></pre></td></tr></table></figure></li>
-<li>例4 Supplier<T>接口<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Supplier</span>&lt;<span class="title">T</span>&gt;</span>&#123;</span><br><span class="line">    <span class="function">T <span class="title">get</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//供应者(supplier)没有参数,调用时会生成一个T类型的值,supplier用于实现懒计算</span></span><br><span class="line">LocalDate hirDay = Obejct.requireNonNullOrElseGet(day,<span class="keyword">new</span> LocalDate(<span class="number">1970</span>,<span class="number">1</span>,<span class="number">1</span>)); <span class="comment">//这不是最优的,我们预计day很少为null,希望只在必要时才构造默认的LocalDate,通过supplier,我们就能延迟计算这个问题.</span></span><br><span class="line">LocalDate hirDay = Obejct.requireNonNullOrElseGet(day,() -&gt; <span class="keyword">new</span> LocalDate(<span class="number">1970</span>,<span class="number">1</span>,<span class="number">1</span>));</span><br><span class="line"><span class="comment">//requireNonNullOrElseGet方法只有在需要值时才调用supplier</span></span><br></pre></td></tr></table></figure>
-
-</T></li>
-</ul>
-<h3 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h3><ul>
-<li>方法引用(method reference),它指示编译器生成一个函数式接口的实例,覆盖这个接口的抽象类方法来调用给定的方法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Timer timer = <span class="keyword">new</span> Timer(<span class="number">1000</span>,event -&gt; System.out.println(event));</span><br><span class="line"><span class="comment">//直接把println方法传递到Timer构造器就更好了</span></span><br><span class="line">Timer timer =  <span class="keyword">new</span> Timer(<span class="number">1000</span>,System.out::println);</span><br><span class="line"><span class="comment">//表达式System.out::println是一个方法引用,会生成一个ActionListener,它的actionPerformed(Actionevent e)方法要调用System.out.println(e)</span></span><br></pre></td></tr></table></figure>
-要用::运算分隔符分个方法名与对象或类名,主要有3种情况</li>
-<li>1 object::instanceMethod</li>
-<li>2 Class::instanceMethod</li>
-<li>3 Class::staticMethod<br>在前2种情况中，方法引用等价于提供方法参数的lambda表达式。前面已经提到，System.out::println 等价于x -&gt; System.out.println(x). 类似的，Math::pow等价于（x,y） -&gt; Math.pow(x,y)。</li>
-</ul>
-<p>对于第三种情况，第一个参数会成为方法的目标。例如，String::compareToIgnoreCase 等同于(x,y） -&gt; x.compareToIgnoreCase(y)。</p>
-<p>类似于lambda表达式，方法引用不能独立存在，总是会转换为函数式接口的实例。可以在方法引用中使用this参数，例：<br>this::equals等同于 x -&gt; this.equals(x)。使用super也是合法的。下面的方法表达式</p>
-<p>super::instanceMethod</p>
-<p>使用this作为目标，会调用给定方法的超类版本。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">greet</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello,world!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TimedGreeter</span> <span class="keyword">extends</span> <span class="title">Greeter</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">greet</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Timer t =<span class="keyword">new</span> Timer (<span class="number">1000</span>,<span class="keyword">super</span>::greet);</span><br><span class="line">        t.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="构造器引用"><a href="#构造器引用" class="headerlink" title="构造器引用"></a>构造器引用</h3><ul>
-<li>int[]::new 等价于lambad表达式x -&gt; new int[x]</li>
-<li>Person::new是Person构造器的一个引用,引用类型更具上下文推导<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设你有个字符串列表,可以把他转换成一个*Person对象数组*,此处要在各个字符串上调用构造器,如下</span></span><br><span class="line">ArrayList&lt;String&gt; names=...;</span><br><span class="line">Stream&lt;Person&gt; stream = names.stream().map(Person::<span class="keyword">new</span>);</span><br><span class="line">List&lt;Person&gt; people = stream.collect(Collectors.toList());<span class="comment">//重点是map方法会为各个列表元素调用Person(String)构造器</span></span><br><span class="line"><span class="comment">//得到Person引用数组</span></span><br><span class="line">Person[] people = stream.toArray(Person[]::<span class="keyword">new</span>);</span><br></pre></td></tr></table></figure>
+<li>clone方法时Object的一个protected方法</li>
+<li>只有Employee类可以克隆Employee对象</li>
+<li>默认的克隆操作时”浅拷贝”,并没有克隆对象中引用的其他对象<img src="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/%E6%B5%85%E6%8B%B7%E8%B4%9D.png" class title="浅拷贝">
 
 </li>
 </ul>
-<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><ul>
-<li>lambda表达式可以捕获外围作用域中变量的值</li>
-<li>lambda表达式中所捕获的变量必须实际上是事实最终变量(effectively final) ,指这个变量初始化之后就不再为它赋新值</li>
-<li>lambda不能使用同名的局部变量</li>
-<li>lambda表达式使用this关键字时,是指创建这个lambda表达式的方法的this参数<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ActionListener listener = event -&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//this.toString()会调用Application对象的toString方法</span></span><br><span class="line">            System.out.println(<span class="keyword">this</span>.toString());</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
+<p>对于每一个类,需要确定:</p>
+<ul>
+<li>1 默认的clone方法是否满足需求</li>
+<li>2 是哦福可以在柯柏年的子对象上调用clone来修补默认的clone方法</li>
+<li>3 是否不该使用clone<br>第3个选项是默认选项,,如果选择1、2选项，类必须:</li>
 </ul>
-<h3 id="处理lambda表达式"><a href="#处理lambda表达式" class="headerlink" title="处理lambda表达式"></a>处理lambda表达式</h3><ul>
-<li>lambda表达式的重点是延迟执行(deferrd ececution)</li>
+<ul>
+<li>1 实现Coneable接口 (Conable没有指定clone方法，clone方法是从Object类继承，该接口只是一个标记,如果没有实现该接口，会抛出异常)</li>
+<li>2 重新定义clone方法，并指定public访问修饰符</li>
 </ul>
-<p>例子</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设你想重复一个动作n次,将这个动作和重复次数传递导一个repeat方法中</span></span><br><span class="line">repeat(<span class="number">10</span>,()-&gt; System.out.printlln(<span class="string">"Hello World!"</span>));</span><br><span class="line"><span class="comment">//要接受这个lambda表达式,需要选择(偶尔可能需要提供)一个函数式接口,这里使用Runnable接口</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">repeat</span><span class="params">(intn,Runnable action)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n ;i++) </span><br><span class="line">    &#123;   <span class="comment">//调用这个lambda表达式时,会执行lambda表达式的主体</span></span><br><span class="line">        action.run();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>更复杂一点的例子</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 处理int值的标准接口如下:</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IntConsumer</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">accept</span><span class="params">(<span class="keyword">int</span> value)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//repeat方法改进版本</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">repeat</span><span class="params">(<span class="keyword">int</span> n,IntConsumer action)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        action.accept(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以如下调用</span></span><br><span class="line">repeat(<span class="number">10</span>,i -&gt; System.out.println(<span class="string">"Countdown:"</span>+(<span class="number">9</span>-i)));</span><br></pre></td></tr></table></figure>
+<p>即使默认的clone（浅拷贝）能满足要求，还是需要实现Coneable接口，将clone重新定义为public，在调用super.clone()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">implements</span> <span class="title">Cloneable</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportException</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (Employee) <span class="keyword">super</span>.clone();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>深拷贝例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Class Employee implemments Coloneable&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Employee <span class="title">clone</span><span class="params">()</span> <span class="keyword">throws</span> CloneNotSupportException</span>&#123;</span><br><span class="line">        <span class="comment">// call Object.clone();</span></span><br><span class="line">        Employee cloned = <span class="keyword">new</span> (Employee) <span class="keyword">super</span>.clone();</span><br><span class="line">        <span class="comment">// clone mutable fields</span></span><br><span class="line">        cloned.hireDay = (Date) hirDay.clone();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> cloned;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<img src="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151111.jpg" class title="常用函数接口">
-<img src="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151200.jpg" class title="基本类型的函数式接口">
 
-<h3 id="再谈Comparator"><a href="#再谈Comparator" class="headerlink" title="再谈Comparator"></a>再谈Comparator</h3><p>Comparator接口包含很多方便的静态方法来创建比较器.这些方法可用于lambda表达式或方法引用</p>
-<p>静态comparing方法去一个”键提取器”函数,它将类型T映射为一个课比较的类型(如String).对要比较的对象应用这个函数,然后对返回的键完成比较</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//假设一个Person对象数组,按名字对这些对象经行排序</span></span><br><span class="line">Arrays.sort(people, Comparator.comparint(Person::getName))</span><br><span class="line"><span class="comment">//把这个比较器与thenComparing方法串起来</span></span><br><span class="line">Arrays.sort(people,</span><br><span class="line">    Comparator.comparing(Person::getLastName)</span><br><span class="line">    .thenComparing(Person::getFirstName));</span><br></pre></td></tr></table></figure>
-<p>comparing和thenComparing方法都有变体形式,可以避免int、long或double值的装箱</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(people, Comparator.comparingInt(p -&gt; p.getName().length()));</span><br></pre></td></tr></table></figure>
-<p>nullsLast和nullsFirst,这些静态方法会修改现有的比较器，在遇到null值时不会报错，而是将这个值标记为小于或大于正常值<br>nullsFirst方法需要一个比较器，这里就是比较两个字符串的比较器。naturalOrder方法可以为任何一个实现了Compareable的类建立一个比较器</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Comparator.*;</span><br><span class="line"></span><br><span class="line">Arrays.sort(people , comparing(Person::getMiddleName,nullsFirst(naturalOrder)));</span><br></pre></td></tr></table></figure>
-<p>静态reverseOrder方法会提供自然顺序的逆序。要让比较器逆序比较，可使用reversed实例方法<br>例如naturalOrder().reversed()等同于reverseOrder();</p>
 
       
 
@@ -392,7 +381,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -406,18 +395,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/07/07/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E5%86%85%E9%83%A8%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java核心技术卷I第六章内部类
+          Java卷I第六章lambda表达式
         
       </div>
     </a>
   
   
-    <a href="/2020/07/05/Java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java核心技术卷I第六章接口</div>
+    <a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java卷I第五章继承</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -444,7 +433,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#lambda表达式"><span class="toc-number">1.</span> <span class="toc-text">lambda表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda表达式语法"><span class="toc-number">1.1.</span> <span class="toc-text">lambda表达式语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数式接口"><span class="toc-number">1.2.</span> <span class="toc-text">函数式接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法引用"><span class="toc-number">1.3.</span> <span class="toc-text">方法引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构造器引用"><span class="toc-number">1.4.</span> <span class="toc-text">构造器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量作用域"><span class="toc-number">1.5.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#处理lambda表达式"><span class="toc-number">1.6.</span> <span class="toc-text">处理lambda表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#再谈Comparator"><span class="toc-number">1.7.</span> <span class="toc-text">再谈Comparator</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接口"><span class="toc-number">1.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#接口概念"><span class="toc-number">1.1.</span> <span class="toc-text">接口概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接口属性"><span class="toc-number">1.2.</span> <span class="toc-text">接口属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静态和私有方法"><span class="toc-number">1.3.</span> <span class="toc-text">静态和私有方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#默认方法"><span class="toc-number">1.4.</span> <span class="toc-text">默认方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决默认方法冲突"><span class="toc-number">1.5.</span> <span class="toc-text">解决默认方法冲突</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comparator接口"><span class="toc-number">1.6.</span> <span class="toc-text">Comparator接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象克隆"><span class="toc-number">1.7.</span> <span class="toc-text">对象克隆</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -561,10 +550,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java基础</a>
