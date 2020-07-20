@@ -25,14 +25,19 @@
     }
   </style>
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="可扩展性标记语言(Extensible Markup Language,XML)">
+<meta property="og:type" content="article">
 <meta property="og:title" content="XML文件学习">
 <meta property="og:url" content="http://yoursite.com/2020/07/20/XML%E6%96%87%E4%BB%B6%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
+<meta property="og:description" content="可扩展性标记语言(Extensible Markup Language,XML)">
+<meta property="og:image" content="http://yoursite.com/2020/07/20/XML%E6%96%87%E4%BB%B6%E5%AD%A6%E4%B9%A0/XML2.jpg">
 <meta property="article:published_time" content="2020-07-20T15:43:41.000Z">
-<meta property="article:modified_time" content="2020-07-20T15:43:41.582Z">
+<meta property="article:modified_time" content="2020-07-20T17:55:53.700Z">
 <meta property="article:author" content="LTZY">
+<meta property="article:tag" content="XML">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/20/XML%E6%96%87%E4%BB%B6%E5%AD%A6%E4%B9%A0/XML2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -196,7 +201,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">0字</span>
+      <span class="post-count">1k字</span>
     </span>
   </span>
 
@@ -205,7 +210,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">1分</span>
+      <span class="post-count">4分</span>
     </span>
   </span>
 </div>
@@ -219,7 +224,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>可扩展性标记语言(Extensible Markup Language,XML)</p>
+<a id="more"></a>
+
+
+<h1 id="XML概述"><a href="#XML概述" class="headerlink" title="XML概述"></a>XML概述</h1><p><a href="https://www.w3school.com.cn/xml/xml_usedfor.asp" target="_blank" rel="noopener">XML用途</a></p>
+<ul>
+<li>1使用元素时:<br><code>&lt;font name=&quot;Helvetica&quot; size=&quot;36&quot;</code></li>
+<li>2使用属性时:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;font&gt;</span><br><span class="line">    &lt;name&gt;HeLvetica&lt;&#x2F;name&gt;</span><br><span class="line">    &lt;size&gt;36&lt;&#x2F;size&gt;</span><br><span class="line">&lt;&#x2F;font&gt;</span><br></pre></td></tr></table></figure></li>
+<li>经验法则:属性只应该用来修改值得解释,而不是用来指定值</li>
+</ul>
+<h1 id="解析XML文档"><a href="#解析XML文档" class="headerlink" title="解析XML文档"></a>解析XML文档</h1><p>要处理XMl文档,就要先解析它.解析器读入一个文件,确认就有正确得格式,然后将其分解成各种元素.</p>
+<p>Java库提供了两种XML解析器:</p>
+<ul>
+<li>1像文档对象模型(Document Object Model,DOM)解析器这样得树型解析器(tree parser),它们将读入得XML文档转换为树结构</li>
+<li>2像XML简单API(simple API for XML,SAX)解析器这样的流机制解析器(streaming parser),它们在读入XML文档时生成相应的事件<br><em>如果要处理很长文档,用DOm解析器会生成树结构会消耗大量内存,或如果指示对使用某些元素,不关心它的上下文,可以考虑使用流机制解析器(SAX)</em></li>
+</ul>
+<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><blockquote>
+<ul>
+<li>1读入一个XML文档,首先需要一个DcoumentBulider对象<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;DocumentBuliderFactory factory = DoucmentFactory.newInstance();</span><br><span class="line">&gt;DocumentBuilder builder = factory.newDocumentBuilder();</span><br></pre></td></tr></table></figure></li>
+<li>2从某个文件中读取某个文档<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;File f =...;</span><br><span class="line">&gt;Doucment doc = builder.parse(f);</span><br></pre></td></tr></table></figure></li>
+<li>3或者使用一个URL<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;URL u =...;</span><br><span class="line">&gt;Document doc = builder.parse(in);</span><br></pre></td></tr></table></figure>
+如果使用输入流作为输入源,那对于那些以该文件为先对路径而被引用的文档,解析器将无法定位,比如在同一个目录中的DTD.但可以通过安装一个”实体解析器”<br>(entity resolver)解决该问题</li>
+</ul>
+</blockquote>
+<p>Document对象时XML文档的树型结构在内存中的表达方式.它由实现了Node接口及其各种子接口的类的对象构成,下图显示各个子接口层次:</p>
+
+
+
+<blockquote>
+<ul>
+<li>分析子元素时注意,例如你正在处理以下文档<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="tag">&lt;<span class="name">font</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">name</span>&gt;</span>Helvetica<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">size</span>&gt;</span>36<span class="tag">&lt;/<span class="name">size</span>&gt;</span></span><br><span class="line">&gt;<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
+你预计得到2个子元素,但是解析器却报告书有5个<br>需注意空白字符,使用getData方法取值时可调用trim方法(去除前后空字符串)<img src="/2020/07/20/XML%E6%96%87%E4%BB%B6%E5%AD%A6%E4%B9%A0/XML2.jpg" class title="一颗简单的DOM树">
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><ul>
+<li>java.xml.parsers.DocumentBuilderFactory   1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">static</span> DocumentBuilderFactory <span class="title">nweInstance</span><span class="params">()</span>   <span class="comment">//返回DocumentBuilderFactory类的一个实例</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;DoucmentBuilder <span class="title">newDocumentBuilder</span><span class="params">()</span>          <span class="comment">//返回DocumentBuilder类的一个实例</span></span></span><br></pre></td></tr></table></figure></li>
+<li>java.xml.parsers.DocumentBuilder   1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function">Document <span class="title">parse</span><span class="params">(File f)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Document <span class="title">parse</span><span class="params">(String url)</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Document <span class="title">parse</span><span class="params">(InputStream in)</span>  <span class="comment">//解析来给定文件、URL或输入流的XML文档，返回解析后的文档</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.Document  1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function">Element <span class="title">getDocumentElement</span><span class="params">()</span>    <span class="comment">//返回文档的根元素</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.Element   1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function">String <span class="title">getTagName</span><span class="params">()</span>              <span class="comment">//返回元素的名字</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;String <span class="title">getAttribute</span><span class="params">(String name)</span> <span class="comment">//返回给定名字的属性值，没有该属性时返回空字符串</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.Node  1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function">NodeList <span class="title">getChildNodes</span><span class="params">()</span>           <span class="comment">//返回包含该节点的所有子元素的节点列表</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Node <span class="title">getFirstChild</span><span class="params">()</span>                </span></span><br><span class="line"><span class="function">&gt;Node <span class="title">getLastChild</span><span class="params">()</span>             <span class="comment">//获取节点第一个或最后一个子节点，该节点无子节点时返回null</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Node <span class="title">getNextSibling</span><span class="params">()</span>           </span></span><br><span class="line"><span class="function">&gt;Node <span class="title">getPreviousSibling</span><span class="params">()</span>       <span class="comment">//获取该节点的下一个或上一个兄弟节点，在该节点无兄弟节点时返回null</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Node <span class="title">getParentNode</span><span class="params">()</span>            <span class="comment">//获得该节点的父节点，在该节点是文档节点时返回null</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;NamedNodeMap <span class="title">getAttributes</span><span class="params">()</span>    <span class="comment">//返回含有描述该节点所有属性的Attr节点的映射表</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;String <span class="title">getNodeName</span><span class="params">()</span>            <span class="comment">//返回该节点的名字，当该节点为Attr节点时，该名字就是属性名</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;String <span class="title">getNodeValues</span><span class="params">()</span>          <span class="comment">//返回该节点的值，当该节点为Attr节点时，该值就是属性值</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.CharacterData 1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function">String <span class="title">getData</span><span class="params">()</span>                <span class="comment">//返回存储在节点中的文本</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.NodeList  1.4<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">getLength</span><span class="params">()</span>                 <span class="comment">//返回列表中的节点数</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Node <span class="title">item</span><span class="params">(<span class="keyword">int</span> index)</span>            <span class="comment">//返回给定索引处的节点。索引值范围在0到getLength()-1之间</span></span></span><br></pre></td></tr></table></figure></li>
+<li>org.w3c.dom.NameNodeMap<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">getLength</span><span class="params">()</span>                 <span class="comment">//返回该节点映射表中的节点数</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">&gt;Node <span class="title">item</span><span class="params">(<span class="keyword">int</span> index)</span>            <span class="comment">//返回给定索引处的节点。索引值范围在0到getLength()-1之间</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<h3 id="验证XML文档"><a href="#验证XML文档" class="headerlink" title="验证XML文档"></a>验证XML文档</h3><h3 id="使用XPath来定位信息"><a href="#使用XPath来定位信息" class="headerlink" title="使用XPath来定位信息"></a>使用XPath来定位信息</h3><h3 id="使用命名空间"><a href="#使用命名空间" class="headerlink" title="使用命名空间"></a>使用命名空间</h3><h3 id="流机制解析器"><a href="#流机制解析器" class="headerlink" title="流机制解析器"></a>流机制解析器</h3><h3 id="生成XML文档"><a href="#生成XML文档" class="headerlink" title="生成XML文档"></a>生成XML文档</h3><h3 id="XSL转换"><a href="#XSL转换" class="headerlink" title="XSL转换"></a>XSL转换</h3>
       
 
       
@@ -258,6 +311,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -351,7 +415,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#XML概述"><span class="toc-number">1.</span> <span class="toc-text">XML概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解析XML文档"><span class="toc-number">2.</span> <span class="toc-text">解析XML文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DOM"><span class="toc-number">2.1.</span> <span class="toc-text">DOM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#API"><span class="toc-number">2.2.</span> <span class="toc-text">API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#验证XML文档"><span class="toc-number">2.2.1.</span> <span class="toc-text">验证XML文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用XPath来定位信息"><span class="toc-number">2.2.2.</span> <span class="toc-text">使用XPath来定位信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用命名空间"><span class="toc-number">2.2.3.</span> <span class="toc-text">使用命名空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#流机制解析器"><span class="toc-number">2.2.4.</span> <span class="toc-text">流机制解析器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成XML文档"><span class="toc-number">2.2.5.</span> <span class="toc-text">生成XML文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XSL转换"><span class="toc-number">2.2.6.</span> <span class="toc-text">XSL转换</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -478,15 +542,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">idea快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">idea快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">书写规范</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
             
             <div class="clearfix"></div>
