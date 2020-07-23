@@ -32,7 +32,7 @@
 <meta property="og:site_name" content="嘤嘤嘤">
 <meta property="og:description" content="泛型程序设计优势、限制与局限性、泛型类型的继承规则、通配符类型、反射和泛型">
 <meta property="article:published_time" content="2020-07-14T01:19:17.000Z">
-<meta property="article:modified_time" content="2020-07-15T08:46:47.143Z">
+<meta property="article:modified_time" content="2020-07-23T08:08:55.363Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,9 @@
 <li>虚拟机种没有泛型，只有普通的类和方法</li>
 <li>所有的类型参数都会替换为它们的限定类型</li>
 <li>会合成桥方法来保持多态</li>
-<li>为保持类型安全性，必要时会插入强制类型转换 <h2 id="简单定义泛型类"><a href="#简单定义泛型类" class="headerlink" title="简单定义泛型类"></a>简单定义泛型类</h2></li>
+<li>为保持类型安全性，必要时会插入强制类型转换 </li>
+</ul>
+<h2 id="简单定义泛型类"><a href="#简单定义泛型类" class="headerlink" title="简单定义泛型类"></a>简单定义泛型类</h2><ul>
 <li>定义:泛型类(generic class)就是有一个或多个变量的类</li>
 <li>通常类型变量使用大写字母,简短.Java库使用变量E表示集合的元素类型,K和V表示键和值的类型,T、U、S表示任意类型<br>定义泛型类Pari类:<br><code>public class Pair&lt;T,U&gt;{...}</code><br>类型变量在整个类定义中用于指定方法的返回类型以及字段和局部变量的类型,例如:<br><code>private T first;</code></li>
 </ul>
@@ -243,8 +245,9 @@
 <ul>
 <li>调用一个泛型方法,可以把具体类型包括在&lt;&gt;中<br><code>String middle = ArrayAlg.&lt;String&gt;getMiddle(&quot;John&quot;,&quot;Q&quot;,&quot;Public&quot;);</code></li>
 <li>大多数情况下,可以省略&lt;&gt;中的参数类型<br><code>String middle = ArrayAlg.getMiddle(&quot;John&quot;,&quot;Q&quot;,&quot;Public&quot;);</code></li>
-<li>上述情况偶尔出错<br><code>double middle = ArrayAlg.getMiddle(3.14,1729,0);</code><br>错误提示:解释这个代码有两种方式,且都合法.编译器把参数自动装箱为1个Double和2个Integer对象,然后寻找这些类的共同超类.实际上找到了2个超类型:Number和Comparable接口,Comparable接口本身是一个泛型类.补救措施是将所有的参数都写为double值.<h2 id="泛型变量的限定"><a href="#泛型变量的限定" class="headerlink" title="泛型变量的限定"></a>泛型变量的限定</h2>一个类型变量或通配符可以有多个限定,例如:<br><code>T extends Comparble &amp; Serializable</code><br>在Java中继承中,可以有多个接口超类型,但最多一个限定可以是类.<br>且有类有一个类作为限定,它必须是限定列表中第一个限定</li>
+<li>上述情况偶尔出错<br><code>double middle = ArrayAlg.getMiddle(3.14,1729,0);</code><br>错误提示:解释这个代码有两种方式,且都合法.编译器把参数自动装箱为1个Double和2个Integer对象,然后寻找这些类的共同超类.实际上找到了2个超类型:Number和Comparable接口,Comparable接口本身是一个泛型类.补救措施是将所有的参数都写为double值.</li>
 </ul>
+<h2 id="泛型变量的限定"><a href="#泛型变量的限定" class="headerlink" title="泛型变量的限定"></a>泛型变量的限定</h2><p>一个类型变量或通配符可以有多个限定,例如:<br><code>T extends Comparble &amp; Serializable</code><br>在Java中继承中,可以有多个接口超类型,但最多一个限定可以是类.<br>且有一个类作为限定时,它必须是限定列表中第一个限定</p>
 <h2 id="泛型代码和虚拟机"><a href="#泛型代码和虚拟机" class="headerlink" title="泛型代码和虚拟机"></a>泛型代码和虚拟机</h2><p>虚拟机没有泛型类型对象—-所有对象都属于普通类</p>
 <h3 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h3><p>无论何时顶一个泛型类型.都会自动提供一个相应的原始类型(raw type).这个原始类型的名字就是去掉类型参数后的泛型类别名.类型变量会被擦除(erased),并替换为限定类型(无限定的变量替换为Object)</p>
 <p>例1:T是无限定的变量,直接用Object代替,结果是一个普通类</p>
@@ -548,11 +551,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XML</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+                <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
               <li class="article-tag-list-item">

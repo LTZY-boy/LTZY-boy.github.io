@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151111.jpg">
 <meta property="og:image" content="http://yoursite.com/2020/07/07/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/IMG_20200707_151200.jpg">
 <meta property="article:published_time" content="2020-07-07T02:13:12.000Z">
-<meta property="article:modified_time" content="2020-07-14T01:16:08.103Z">
+<meta property="article:modified_time" content="2020-07-23T07:47:49.752Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="java基础">
 <meta name="twitter:card" content="summary">
@@ -258,6 +258,7 @@
 <p>super::instanceMethod</p>
 <p>使用this作为目标，会调用给定方法的超类版本。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Greeter</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">greet</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello,world!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TimedGreeter</span> <span class="keyword">extends</span> <span class="title">Greeter</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">greet</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        Timer t =<span class="keyword">new</span> Timer (<span class="number">1000</span>,<span class="keyword">super</span>::greet);</span><br><span class="line">        t.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h3 id="构造器引用"><a href="#构造器引用" class="headerlink" title="构造器引用"></a>构造器引用</h3><ul>
 <li>int[]::new 等价于lambad表达式x -&gt; new int[x]</li>
 <li>Person::new是Person构造器的一个引用,引用类型更具上下文推导<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设你有个字符串列表,可以把他转换成一个*Person对象数组*,此处要在各个字符串上调用构造器,如下</span></span><br><span class="line">ArrayList&lt;String&gt; names=...;</span><br><span class="line">Stream&lt;Person&gt; stream = names.stream().map(Person::<span class="keyword">new</span>);</span><br><span class="line">List&lt;Person&gt; people = stream.collect(Collectors.toList());<span class="comment">//重点是map方法会为各个列表元素调用Person(String)构造器</span></span><br><span class="line"><span class="comment">//得到Person引用数组</span></span><br><span class="line">Person[] people = stream.toArray(Person[]::<span class="keyword">new</span>);</span><br></pre></td></tr></table></figure>
@@ -571,11 +572,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XML</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
+                <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
               <li class="article-tag-list-item">
