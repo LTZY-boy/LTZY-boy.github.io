@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>嘤嘤嘤</title>
+  <title>Spring学习1 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,12 +25,21 @@
     }
   </style>
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="嘤嘤嘤">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="工厂设计模式、第一个Spring程序细节分析、整合日志框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring学习1">
+<meta property="og:url" content="http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
+<meta property="og:description" content="工厂设计模式、第一个Spring程序细节分析、整合日志框架">
+<meta property="og:image" content="http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring11.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring12.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring13.png">
+<meta property="article:published_time" content="2020-07-23T00:50:59.000Z">
+<meta property="article:modified_time" content="2020-07-23T03:02:07.362Z">
 <meta property="article:author" content="LTZY">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring11.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -172,22 +181,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java卷I第六章接口" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Spring学习1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/">Java卷I第六章接口</a>
+    <h1 class="article-title" itemprop="name">
+      Spring学习1
     </h1>
   
 
         
-        <a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
-  	<time datetime="2020-07-05T14:29:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
+        <a href="/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/" class="archive-article-date">
+  	<time datetime="2020-07-23T00:50:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-23</time>
 </a>
         
         
@@ -196,7 +203,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">1.1k字</span>
+      <span class="post-count">2.1k字</span>
     </span>
   </span>
 
@@ -205,7 +212,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">4分</span>
+      <span class="post-count">9分</span>
     </span>
   </span>
 </div>
@@ -219,12 +226,150 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>接口</p>
-        
-          <a class="article-more-a" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/#more">more >></a>
-        
+        <p>工厂设计模式、第一个Spring程序细节分析、整合日志框架</p>
+<a id="more"></a>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><strong>EJB(Enterprise Java Bean)存在的问题:EJB是重量级框架</strong></p>
+<ul>
+<li>1.运行环境差</li>
+<li>2.代码移植性差<h2 id="什么是-Spring"><a href="#什么是-Spring" class="headerlink" title="什么是 Spring?"></a>什么是 Spring?</h2>Spring是要给轻量级的JavaEE解决方案，整合众多优秀的设计模式<h3 id="什么是轻量级"><a href="#什么是轻量级" class="headerlink" title="什么是轻量级?"></a>什么是轻量级?</h3></li>
+<li>1.对于运行环境没有额外要求的:<br>&emsp;&emsp;开源:tomcat、resion、jetty<br>&emsp;&emsp;授给:weblogic、websphere</li>
+<li>2.代码移植性高:不需要实现额外接口。<h3 id="javaEE的解决方案"><a href="#javaEE的解决方案" class="headerlink" title="javaEE的解决方案:"></a>javaEE的解决方案:</h3><img src="/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring11.png" class>
+
+</li>
+</ul>
+<p>整合设计模式：</p>
+<ul>
+<li>1.工厂</li>
+<li>2.代理</li>
+<li>3.模板</li>
+<li>4.策略<h3 id="什么是设计模式"><a href="#什么是设计模式" class="headerlink" title="什么是设计模式"></a>什么是设计模式</h3></li>
+</ul>
+<ul>
+<li>广义慨念:面向对象设计中，解决特定问题的经典代码</li>
+<li>狭义概念:GOF4人帮定义的23种设计模式:工厂、适配器、装饰器、门面、代理、模板…</li>
+</ul>
+<h2 id="⼯⼚设计模式"><a href="#⼯⼚设计模式" class="headerlink" title="⼯⼚设计模式"></a>⼯⼚设计模式</h2><p>什么是工厂设计模式？<br>&emsp;&emsp;1.概念:通过工厂类，创建对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line">UserDAO userDao = <span class="keyword">new</span> UserDaoImpl();</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;2.<strong>解耦合</strong></p>
+<ul>
+<li>耦合:指定是代码间的强关联关系，一方的改变会影响到另一方;<br>&emsp;&emsp;问题:不宜与代码维护<br>&emsp;&emsp;简单:把接口的实现类，硬编码再程序中；<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UserService userService = <span class="keyword">new</span> UserServiceImpl();</span><br></pre></td></tr></table></figure>
+<h3 id="简单工厂的设计"><a href="#简单工厂的设计" class="headerlink" title="简单工厂的设计"></a>简单工厂的设计</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ltzy.basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanFactory</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Properties env = <span class="keyword">new</span> Properties();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//第一步 获得IO输入流</span></span><br><span class="line">            InputStream inputStream = BeanFactory.class.getResourceAsStream("/applicationContext.properties");</span><br><span class="line">            <span class="comment">//第二步 文件内容 封装 Properties集合中 key = userService value = com.baizhixx.UserServiceImpl</span></span><br><span class="line">            env.load(inputStream);</span><br><span class="line"></span><br><span class="line">            inputStream.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">	   对象的创建方式：</span></span><br><span class="line"><span class="comment">	       1. 直接调用构造方法 创建对象  UserService userService = new UserServiceImpl();</span></span><br><span class="line"><span class="comment">	       2. 通过反射的形式 创建对象 解耦合</span></span><br><span class="line"><span class="comment">	       Class clazz = Class.forName("com.ltzy.basic.UserServiceImpl");</span></span><br><span class="line"><span class="comment">	       UserService userService = (UserService)clazz.newInstance();</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> UserService <span class="title">getUserService</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        UserService userService = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//com.ltzy.basic.UserServiceImpl</span></span><br><span class="line">            Class clazz = Class.forName(env.getProperty(<span class="string">"userService"</span>));</span><br><span class="line">            userService = (UserService) clazz.newInstance();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> userService;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> UserDAO <span class="title">getUserDAO</span><span class="params">()</span></span>&#123;</span><br><span class="line">        UserDAO userDAO = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Class clazz = Class.forName(env.getProperty(<span class="string">"userDAO"</span>));</span><br><span class="line">            userDAO = (UserDAO) clazz.newInstance();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> userDAO;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+配置文件applicationContext.properties<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Properties 集合 存储 Properties文件的内容</span><br><span class="line"># 特殊Map key=String value=String</span><br><span class="line"># Properties [userService = com.ltzy.xxx.UserServiceImpl]</span><br><span class="line"># Properties.getProperty("userService")</span><br><span class="line"></span><br><span class="line">userService = com.ltzy.basic.UserServiceImpl</span><br><span class="line">userDAO = com.ltzy.basic.UserDAOImpl</span><br></pre></td></tr></table></figure>
+<h3 id="通⽤⼯⼚的设计"><a href="#通⽤⼯⼚的设计" class="headerlink" title="通⽤⼯⼚的设计"></a>通⽤⼯⼚的设计</h3>问题:简单工厂会存在大量的代码冗余<img src="/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring12.png" class>
+通过工厂的代码:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ltzy.basic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BeanFactory</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Properties env = <span class="keyword">new</span> Properties();</span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//第一步 获得IO输入流</span></span><br><span class="line">            InputStream inputStream = BeanFactory.class.getResourceAsStream("/applicationContext.properties");</span><br><span class="line">            <span class="comment">//第二步 文件内容 封装 Properties集合中 key = userService value = com.ltzy.basic.UserServiceImpl</span></span><br><span class="line">            env.load(inputStream);</span><br><span class="line"></span><br><span class="line">            inputStream.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">     <span class="comment">/*</span></span><br><span class="line"><span class="comment">      key 小配置文件中的key [userDAO,userService]</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Object <span class="title">getBean</span><span class="params">(String key)</span></span>&#123;</span><br><span class="line">         Object ret = <span class="keyword">null</span>;</span><br><span class="line">         <span class="keyword">try</span> &#123;</span><br><span class="line">             Class clazz = Class.forName(env.getProperty(key));</span><br><span class="line">             ret = clazz.newInstance();</span><br><span class="line">         &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="keyword">return</span> ret;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="通⽤⼯⼚的使⽤⽅式"><a href="#通⽤⼯⼚的使⽤⽅式" class="headerlink" title="通⽤⼯⼚的使⽤⽅式"></a>通⽤⼯⼚的使⽤⽅式</h3>&emsp;&emsp;1.定义类型(类)<br>&emsp;&emsp;2.通过配置文件的配置告知工厂<br>&emsp;&emsp;<code>applicationContext.properties 中 key = value;</code><br>&emsp;&emsp;3.通过工厂获得类的对象<br>&emsp;&emsp;<code>Object ret = BeanFactory.getBean(&quot;key&quot;);</code><br><strong>总结</strong><br><strong>Spring本质:</strong>:工厂ApplicationContext(applicationContext.xml)</li>
+</ul>
+<h1 id="第一个-Spring-程序"><a href="#第一个-Spring-程序" class="headerlink" title="第一个 Spring 程序"></a>第一个 Spring 程序</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>依赖查询网站：<a href="https://mvnrepository.com" target="_blank" rel="noopener">https://mvnrepository.com</a><br><strong>配置Spring的jar包:</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>String的配置文件</strong><br>&emsp;&emsp;1.配置文件的放置位置:任意位置，没有硬性要求;<br>&emsp;&emsp;2.配置文件的命名：没有硬性要求，建议：applicationContext.xml;<br>思考：日后应用Spring框架时，需要进行配置文件路径的设置</p>
+<h2 id="Spring-的核⼼API"><a href="#Spring-的核⼼API" class="headerlink" title="Spring 的核⼼API"></a>Spring 的核⼼API</h2><p>ApplictionContext</p>
+<blockquote>
+<ul>
+<li>作用:Spring提供的ApplicationContext这个工厂，用于对象的创建;<br>好处:解耦合</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>ApplicationContext是接口类型;<br>ApplicationContext是接口类型:<br>接口：屏蔽实现的差异<br>为web环境(main junit):ClassPathXmlApplicationContext<br>web环境:XmlWebApplicationContext<img src="/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/Spring13.png" class>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>重量级资源：<br>ApplicationContext工厂的对象占用大量内存。<br>不会频繁创建，一个应用只会创建一个工厂对象<br>ApplicationContext工厂:一定是线程安全的(多线程并发访问)。</li>
+</ul>
+</blockquote>
+<h2 id="程序开发"><a href="#程序开发" class="headerlink" title="程序开发"></a>程序开发</h2><p>&emsp;&emsp;1.创建类型:Person.java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;2.配置文件的配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"person"</span> <span class="attr">class</span>=<span class="string">"com.ltzy.basic.Person"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;3.通过工厂类，获得对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用于测试Spring的第一个程序</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1、获取spring的工厂</span></span><br><span class="line">    ApplicationContext ctx = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"/applicationContext.xml"</span>);</span><br><span class="line">    <span class="comment">// 2、通过工厂类获得对象</span></span><br><span class="line">    Person person = (Person)ctx.getBean(<span class="string">"person"</span>);</span><br><span class="line">    System.out.println(person);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="细节分析"><a href="#细节分析" class="headerlink" title="细节分析"></a>细节分析</h2><p>名词解释:Spring工厂创建的对象，叫做bean 或者 组件(componet)</p>
+<h3 id="Spring-⼯⼚的相关的⽅法"><a href="#Spring-⼯⼚的相关的⽅法" class="headerlink" title="Spring ⼯⼚的相关的⽅法"></a>Spring ⼯⼚的相关的⽅法</h3><p>getBean:传入id值和 类名 获取对象，不需要强制类型转换。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过这种⽅式获得对象，就不需要强制类型转换</span></span><br><span class="line">Person person = ctx.getBean(<span class="string">"person"</span>, Person<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">System.out.println(<span class="string">"person = "</span> + person);</span><br></pre></td></tr></table></figure>
+<p>getBean:只能指定类名，Spring配置文件中只能有一个bean类型。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用这种方式的话, 当前Spring的配置文件中 只能有一个bean class是Person类型</span></span><br><span class="line">Person person = ctx.getBean(Person<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">System.out.println(<span class="string">"person = "</span> + person);</span><br></pre></td></tr></table></figure>
+<p>getBeanDefinitionNames:获取Spring配置文件中所有bean标签的id值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取的是Spring工厂配置文件中所有bean标签的id值  person person1</span></span><br><span class="line">String[] beanDefinitionNames = ctx.getBeanDefinitionNames();</span><br><span class="line"><span class="keyword">for</span> (String beanDefinitionName : beanDefinitionNames) &#123;</span><br><span class="line">	System.out.println(<span class="string">"beanDefinitionName = "</span> + beanDefinitionName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>getBeanNamesForType:根据类型获得Spring配置文件中对应的id值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 根据类型获得Spring配置文件中对应的id值</span></span><br><span class="line">String[] beanNamesForType = ctx.getBeanNamesForType(Person<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"><span class="keyword">for</span> (String id : beanNamesForType) &#123;</span><br><span class="line">	System.out.println(<span class="string">"id = "</span> + id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>containsBeanDefinition:用于判断是否存在指定id值得bean，<strong>不能判断name值</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用于判断是否存在指定id值的bean,不能判断name值</span></span><br><span class="line"><span class="keyword">if</span> (ctx.containsBeanDefinition(<span class="string">"person"</span>)) &#123;</span><br><span class="line">	System.out.println(<span class="keyword">true</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	System.out.println(<span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="配置文件中的细节"><a href="#配置文件中的细节" class="headerlink" title="配置文件中的细节"></a>配置文件中的细节</h3><p>如果bean只配置class属性:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.ltzy.basic.Person"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>会自动生成一个id, com.ltzy.basic.Person#1<blockquote>
+<p>可以使用getBeanNamesForType验证。</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>应用场景:<blockquote>
+<p>如果这个bean <strong>只需要使用一次</strong>,那么就可以省略id值；<br>如果这个bean会多次使用，或被其他bean引用则需要设置id值；</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<p>name属性:</p>
+<blockquote>
+<ul>
+<li>作用：用于在Spring配置文件中，为bean对象定义别名</li>
+<li>name与id的相同点:<blockquote>
+<p>ctx.getBean(“id”) 或 ctx.getBean(“name”)都可以创建对象；<br><bean id="person" class="XXXX.Person"> 与 <bean id="person" class="XXXX.Person">等效;</bean></bean></p>
+</blockquote>
+</li>
+<li>name与id的区别:<blockquote>
+<p>别名可以定义多个,但是id属性只能由一个值;<br>XML的id属性的值，命名要求:必须以字母开头，可以包含 字符、数字、下划线、连字符;不能以特殊字符开头 /person;XML的name属性的值,命名没有要求,/peron可以.<br>但其实XML发展到了今天:ID属性的限制已经不存在了,/person也可以</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h2 id="Spring⼯⼚的底层实现原理-简易版"><a href="#Spring⼯⼚的底层实现原理-简易版" class="headerlink" title="Spring⼯⼚的底层实现原理(简易版)"></a>Spring⼯⼚的底层实现原理(简易版)</h2>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>问题:未来在发展过程中,是不是所有的对象,都会交给Spring工厂来创建呢?<br>回答:理论上是,但是又特例:<strong>实体对象(entity)</strong> 是不会交给Spring创建,它又持久层架构进行创建</p>
+<h1 id="Spring5-x-与-日志框架-的整合"><a href="#Spring5-x-与-日志框架-的整合" class="headerlink" title="Spring5.x 与 日志框架 的整合"></a>Spring5.x 与 日志框架 的整合</h1><p>Spring与日志框架进行整合,日志框架就可以在控制台中,输出Spring框架运行过程中的一些重要信息.<br>好处:便于了解Spring框架的运行过程,利于程序的调试</p>
+<blockquote>
+<p>默认日志框架<br>pring 1.x、2.x、3.x早期都是基于commonslogging.jar<br>Spring 5.x默认整合的日志框架logback、log4j2<br>Spring如何整合日志框架？<br>Spring5.x整合log4j:<br>&emsp;&emsp;1.引入 <font color="red">log4j.jar</font> 包;</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.21<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;2。引入<font color="red">log4.properties</font>配置文件;</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># resources文件夹根目录下</span></span><br><span class="line"><span class="comment">### 配置根</span></span><br><span class="line"><span class="meta">log4j.rootLogger</span> = <span class="string">debug,console</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 日志输出到控制台显示</span></span><br><span class="line"><span class="meta">log4j.appender.console</span>=<span class="string">org.apache.log4j.ConsoleAppender</span></span><br><span class="line"><span class="meta">log4j.appender.console.Target</span>=<span class="string">System.out</span></span><br><span class="line"><span class="meta">log4j.appender.console.layout</span>=<span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.console.layout.ConversionPattern</span>=<span class="string">%d&#123;yyyy-MM-dd HH:mm:ss&#125; %-5p %c&#123;1&#125;:%L - %m%n</span></span><br></pre></td></tr></table></figure>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝收款.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信收款.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -235,7 +380,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
@@ -244,16 +389,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E5%85%AD%E7%AB%A0%E6%8E%A5%E5%8F%A3/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/23/Spring%E5%AD%A6%E4%B9%A01/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/20/XML%E6%96%87%E4%BB%B6%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">XML文件学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -268,320 +472,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java卷I第五章继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/">Java卷I第五章继承</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2020-07-05T03:11:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        
-        
-          <div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-keyboard-o"></i>
-      <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">2.6k字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="fa fa-hourglass-half"></i>
-      <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">11分</span>
-    </span>
-  </span>
-</div>
-
-          
-
-        
- 
-      </header>
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>继承</p>
-        
-          <a class="article-more-a" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/05/Java%E5%8D%B7I%E7%AC%AC%E4%BA%94%E7%AB%A0%E7%BB%A7%E6%89%BF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-Spring"><span class="toc-number">1.1.</span> <span class="toc-text">什么是 Spring?</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是轻量级"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是轻量级?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javaEE的解决方案"><span class="toc-number">1.1.2.</span> <span class="toc-text">javaEE的解决方案:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是设计模式"><span class="toc-number">1.1.3.</span> <span class="toc-text">什么是设计模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#⼯⼚设计模式"><span class="toc-number">1.2.</span> <span class="toc-text">⼯⼚设计模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单工厂的设计"><span class="toc-number">1.2.1.</span> <span class="toc-text">简单工厂的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通⽤⼯⼚的设计"><span class="toc-number">1.2.2.</span> <span class="toc-text">通⽤⼯⼚的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通⽤⼯⼚的使⽤⽅式"><span class="toc-number">1.2.3.</span> <span class="toc-text">通⽤⼯⼚的使⽤⽅式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#第一个-Spring-程序"><span class="toc-number">2.</span> <span class="toc-text">第一个 Spring 程序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境搭建"><span class="toc-number">2.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring-的核⼼API"><span class="toc-number">2.2.</span> <span class="toc-text">Spring 的核⼼API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#程序开发"><span class="toc-number">2.3.</span> <span class="toc-text">程序开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#细节分析"><span class="toc-number">2.4.</span> <span class="toc-text">细节分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-⼯⼚的相关的⽅法"><span class="toc-number">2.4.1.</span> <span class="toc-text">Spring ⼯⼚的相关的⽅法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件中的细节"><span class="toc-number">2.4.2.</span> <span class="toc-text">配置文件中的细节</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring⼯⼚的底层实现原理-简易版"><span class="toc-number">2.5.</span> <span class="toc-text">Spring⼯⼚的底层实现原理(简易版)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">2.6.</span> <span class="toc-text">思考</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring5-x-与-日志框架-的整合"><span class="toc-number">3.</span> <span class="toc-text">Spring5.x 与 日志框架 的整合</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
-  
-    <article id="post-MySql笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/03/MySql%E7%AC%94%E8%AE%B0/">MySQL学习笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/03/MySql%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-07-03T08:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        
-        
-          <div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-keyboard-o"></i>
-      <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">10.4k字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="fa fa-hourglass-half"></i>
-      <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">47分</span>
-    </span>
-  </span>
-</div>
-
-          
-
-        
- 
-      </header>
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>mysql 基础语法、约束、三大范式、内外连接、查询练习、事务ACID</p>
-        
-          <a class="article-more-a" href="/2020/07/03/MySql%E7%AC%94%E8%AE%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySql</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/03/MySql%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-md常用语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">md常用语法</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-07-03T07:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
-</a>
-        
-        
-          <div style="margin-top:10px;">
-  <span class="post-time">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-keyboard-o"></i>
-      <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">576字</span>
-    </span>
-  </span>
-
-  <span class="post-time">
-    &nbsp; | &nbsp;
-    <span class="post-meta-item-icon">
-      <i class="fa fa-hourglass-half"></i>
-      <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">2分</span>
-    </span>
-  </span>
-</div>
-
-          
-
-        
- 
-      </header>
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>md文件书写规范</p>
-        
-          <a class="article-more-a" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">书写规范</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -611,8 +527,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
