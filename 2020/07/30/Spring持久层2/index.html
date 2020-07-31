@@ -32,7 +32,7 @@
 <meta property="og:site_name" content="嘤嘤嘤">
 <meta property="og:description" content="Spring 事务开发、事务属性详解">
 <meta property="article:published_time" content="2020-07-30T02:23:04.000Z">
-<meta property="article:modified_time" content="2020-07-30T04:03:50.387Z">
+<meta property="article:modified_time" content="2020-07-31T02:10:04.893Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
@@ -199,7 +199,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">1.3k字</span>
+      <span class="post-count">2k字</span>
     </span>
   </span>
 
@@ -208,7 +208,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">5分</span>
+      <span class="post-count">8分</span>
     </span>
   </span>
 </div>
@@ -247,8 +247,8 @@
 <p>结论:控制事务的底层，都是通过<font color="red">Connection</font>对象完成</p>
 <h2 id="Spring-控制事务的开发"><a href="#Spring-控制事务的开发" class="headerlink" title="Spring 控制事务的开发"></a>Spring 控制事务的开发</h2><ul>
 <li>搭建开发环境<font color="red">pom.xml</font><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-tx<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>编码<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userService"</span> <span class="attr">class</span>=<span class="string">"com.yusael.service.UserServiceImpl"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"userDAO"</span> <span class="attr">ref</span>=<span class="string">"userDAO"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--DataSourceTransactionManager--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">@Transactional</span><br><span class="line">public class UserServiceImpl implements UserService &#123;</span><br><span class="line">    private UserDAO userDAO;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>细节<br>&emsp;进行动态代理底层实现的切换，默认<font color="red">false</font>是JDK，<font color="red">true</font>是Cglib。<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">proxy-target-class</span>=<span class="string">"true"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<li>编码<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userService"</span> <span class="attr">class</span>=<span class="string">"com.ltzy.service.UserServiceImpl"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"userDAO"</span> <span class="attr">ref</span>=<span class="string">"userDAO"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--DataSourceTransactionManager--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">@Transactional</span><br><span class="line">public class UserServiceImpl implements UserService &#123;</span><br><span class="line">    private UserDAO userDAO;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>细节<br><code>&lt;tx:annotation-driven transaction-manager=&quot;dataSourceTransactionManager&quot; proxy-target-class=&quot;true&quot;/&gt;</code><br>&emsp;进行动态代理底层实现的切换，默认<font color="red">false</font>是JDK，<font color="red">true</font>是Cglib。<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">proxy-target-class</span>=<span class="string">"true"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -259,11 +259,11 @@
 <blockquote>
 <ol>
 <li><strong>什么是并发</strong>?<blockquote>
-<p>多个事务(用户)在同一时间，访问操作了相同的数据。<br>同一时间:0.000几秒左右</p>
+<p>多个事务(用户)在同一时间，访问操作了相同的数据。<br>同一时间:0.000几秒左右  微小前 微小后</p>
 </blockquote>
 </li>
 <li><strong>并发会产生哪些问题</strong>?<blockquote>
-<p>1.脏读<br>2.不可重复读<br>3.幻影读</p>
+<p>1.脏读<br>2.不可重复读<br>3.幻读</p>
 </blockquote>
 </li>
 <li><strong>并发问题如何解决</strong><blockquote>
@@ -279,14 +279,14 @@
 <blockquote>
 <ul>
 <li>脏读<blockquote>
-<p>一个事务，读取了一一个事务中没有提交的数据，会在本事务中产生数据不一样的现象<br>解决方案:<font color="red">@Transaction(isolation=Isolation.&gt;READ_COMMITTED)</font></p>
+<p>一个事务，读取了一一个事务中没有提交的数据，会在本事务中产生数据不一样的现象<br>解决方案:<font color="red">@Transaction(isolation=Isolation.READ_COMMITTED)</font></p>
 </blockquote>
 </li>
 <li>不可重复读<blockquote>
-<p>一个事务中，多次读取相同的数据，但是读取结果不一样，会在本事务中产生数据不一样&gt;的现象<br>注意：1.不是脏读 2.在一个事务中<br>解决方案:<font color="red">@Transaction(isolation=Isolation.&gt;REPEATABLE_READ)</font><br>本质:一把行锁(对数据库表的某一行加锁)</p>
+<p>一个事务中，多次读取相同的数据，但是读取结果不一样，会在本事务中产生数据不一样&gt;的现象<br>注意：1.不是脏读 2.在一个事务中<br>解决方案:<font color="red">@Transaction(isolation=Isolation.REPEATABLE_READ)</font><br>本质:一把行锁(对数据库表的某一行加锁)</p>
 </blockquote>
 </li>
-<li>幻影读<blockquote>
+<li>幻读<blockquote>
 <p>一个事务中，多次对<strong>整表</strong>进行<strong>查询统计</strong>,但是<strong>结果不一样</strong>，会在本事务中产&gt;生数据不一致的问题<br>解决方案:<font color="red">@Transaction(isolation=Isolation.SERIALIZABLE)&gt;</font><br>本质:表锁(对数据库某个表加锁)</p>
 </blockquote>
 </li>
@@ -299,8 +299,8 @@
 <p><strong>安全效率对比:</strong></p>
 <blockquote>
 <ul>
-<li>并发安全:<font color="red">SERIALIZABLE &gt; READ_ONLY &gt; READ_COMMITTED</font></li>
-<li>运行效率:<font color="red">READ_COMMITTED &gt; READ_ONLY &gt; SERIALIZABLE</font></li>
+<li>并发安全:<font color="red">SERIALIZABLE &gt; REPEATABLE_READ &gt; READ_COMMITTED</font></li>
+<li>运行效率:<font color="red">READ_COMMITTED &gt; REPEATABLE_READ &gt; SERIALIZABLE</font></li>
 </ul>
 </blockquote>
 </blockquote>
@@ -349,10 +349,16 @@
 </blockquote>
 </li>
 <li>查看数据库的默认隔离属性:<blockquote>
-<p>MySQL:<font color="SELECT @@tx_isolatoin;"><br>Oracle:较麻烦，建议百度</font></p>
+<p>MySQL:</p>
+<blockquote>
+<p>– MySQL 8.x, GLOBAL 表示系统级别，不加表示会话级别。<br>SELECT @@GLOBAL.TRANSACTION_ISOLATION;<br>SELECT @@TRANSACTION_ISOLATION;<br>– MySQL 5.x<br>SELECT @@GLOBAL.TX_ISOLATION;<br>SELECT @@TX_ISOLATION;</p>
+</blockquote>
 </blockquote>
 </li>
 </ul>
+<blockquote>
+<p>Oracle:较麻烦，建议百度</p>
+</blockquote>
 </blockquote>
 <hr>
 
@@ -425,7 +431,26 @@
 <li>增删改 方法:使用默认值 REQUIRED</li>
 <li>查询 方法: 显示指定传播属性的值为 SUPPORTS</li>
 </ul>
-<h3 id="只读属性-readOnly"><a href="#只读属性-readOnly" class="headerlink" title="只读属性(readOnly)"></a>只读属性(readOnly)</h3><h3 id="超时属性-tiemout"><a href="#超时属性-tiemout" class="headerlink" title="超时属性(tiemout)"></a>超时属性(tiemout)</h3><h3 id="异常属性"><a href="#异常属性" class="headerlink" title="异常属性"></a>异常属性</h3><h3 id="事务属性常见配置总结"><a href="#事务属性常见配置总结" class="headerlink" title="事务属性常见配置总结"></a>事务属性常见配置总结</h3><h2 id="基于标签的事务属性"><a href="#基于标签的事务属性" class="headerlink" title="基于标签的事务属性"></a>基于标签的事务属性</h2>
+<h3 id="只读属性-readOnly"><a href="#只读属性-readOnly" class="headerlink" title="只读属性(readOnly)"></a>只读属性(readOnly)</h3><p>针对与<strong>只进查询操作的业务方法</strong>,可以加入只读属性，提高运行效率。<br>默认值:<font color="red">false</font><br><code>@Transactional(readOnly = true)</code></p>
+<h3 id="超时属性-tiemout"><a href="#超时属性-tiemout" class="headerlink" title="超时属性(tiemout)"></a>超时属性(tiemout)</h3><blockquote>
+<p>指定了事务等待的最长时间。</p>
+<blockquote>
+<p>1.为什么事务会进行等待?<br>&emsp;当前事务访问数据时，有可能访问的数据被别的事务进行加锁的处理，那么此时本&gt;事务就必须进入等待。<br>2.等待时间，单位是<strong>秒</strong><br>3.如何使用: <font color="red">@Transactional(timeout = 2)</font><br>4.超时属性的默认值: -1<br>&emsp;-1表示超时属性有对应数据库来指定(一般不会主动指定，-1即可)</p>
+</blockquote>
+</blockquote>
+<h3 id="异常属性"><a href="#异常属性" class="headerlink" title="异常属性"></a>异常属性</h3><p>Spring事务处理过程中:</p>
+<ul>
+<li>默认对于<font color="red">RuntimeException</font>及其子类，采用<strong>回滚</strong>的策略</li>
+<li>默认对于<font color="red">Exception</font>及其子类，采用<strong>提交</strong>的策略<br>使用方法:<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Transactional</span>(rollbackFor = java.lang.Exception<span class="class">.<span class="keyword">class</span>,<span class="title">xxx</span>,<span class="title">xxx</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">@<span class="title">Transactional</span>(<span class="title">noRollbackFor</span> </span>= java.lang.RuntimeException,xxx,xxx)</span><br></pre></td></tr></table></figure>
+建议:实战中使用<font color="red">RuntimeException</font>及其子类，使用事务异常处理属性的默认值。<h3 id="事务属性常见配置总结"><a href="#事务属性常见配置总结" class="headerlink" title="事务属性常见配置总结"></a>事务属性常见配置总结</h3>&emsp;1.隔离属性 默认值<br>&emsp;2.传播属性 Required(默认值) 增删改、Supports 查询操作<br>&emsp;3.只读属性 readOnly=false 增删改，true查询操作<br>&emsp;4.超市属性 默认值 -1<br>&emsp;5.异常属性 默认值<br>增删改操作:<font color="red">@Transactional</font><br>查询操作:<font color="red">@Transactional(propagation = Propagation.SUPPORTS,readOnly = true</font></li>
+</ul>
+<h2 id="基于标签的事务属性"><a href="#基于标签的事务属性" class="headerlink" title="基于标签的事务属性"></a>基于标签的事务属性</h2><p>基于注解<font color="red">@Transaction</font>的事务配置回顾:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"userService"</span> <span class="attr">class</span>=<span class="string">"com.ltzy.service.UserServiceImpl"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"userDAO"</span> <span class="attr">ref</span>=<span class="string">"userDAO"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--DataSourceTransactionManager--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">@Transactional</span><br><span class="line">public class UserServiceImpl implements UserService &#123;</span><br><span class="line">    private UserDAO userDAO;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>基于标签的事务配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--DataSourceTransactionManager--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSourceTransactionManager"</span> <span class="attr">class</span>=<span class="string">"org.springframework.jdbc.datasource.DataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:advice</span> <span class="attr">id</span>=<span class="string">"txAdvice"</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">"register"</span> <span class="attr">isolation</span>=<span class="string">"DEFAULT"</span> <span class="attr">propagation</span>=<span class="string">"REQUIRED"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tx:advice</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"pc"</span> <span class="attr">expression</span>=<span class="string">"execution(* com.ltzy.service.UserServiceImpl.register(..))"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"txAdvice"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pc"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>基于标签的事务配置在<strong>实战</strong>中使用的应用方式:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tx:advice</span> <span class="attr">id</span>=<span class="string">"txAdvice"</span> <span class="attr">transaction-manager</span>=<span class="string">"dataSourceTransactionManager"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">"register"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">"modify*"</span>/&gt;</span></span><br><span class="line">        编程时候, service中负责进行增删改操作的方法 都以 modify 开头</span><br><span class="line">        						  查询操作 命名无所谓</span><br><span class="line">        <span class="tag">&lt;<span class="name">tx:method</span> <span class="attr">name</span>=<span class="string">"*"</span> <span class="attr">propagation</span>=<span class="string">"SUPPORTS"</span> <span class="attr">read-only</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tx:attributes</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tx:advice</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"pc"</span> <span class="attr">expression</span>=<span class="string">"execution(* com.ltzy.service..*.*(..))"</span>/&gt;</span></span><br><span class="line">   	应用的过程中, 将 service 都放到 service 包下</span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:advisor</span> <span class="attr">advice-ref</span>=<span class="string">"txAdvice"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pc"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -691,19 +716,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XML</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
               <li class="article-tag-list-item">
