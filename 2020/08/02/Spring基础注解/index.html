@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 错误 | 嘤嘤嘤</title>
+  <title>Spring基础注解 | 嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,12 +25,22 @@
     }
   </style>
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="嘤嘤嘤">
-<meta property="og:url" content="http://yoursite.com/tags/%E9%94%99%E8%AF%AF/index.html">
+  <meta name="description" content="注解基础概念，Spring基础注解(Spring 2.x)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring基础注解">
+<meta property="og:url" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
+<meta property="og:description" content="注解基础概念，Spring基础注解(Spring 2.x)">
+<meta property="og:image" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A31.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A32.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A33.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A33.png">
+<meta property="article:published_time" content="2020-08-02T14:06:42.000Z">
+<meta property="article:modified_time" content="2020-08-02T02:23:29.813Z">
 <meta property="article:author" content="LTZY">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A31.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -172,60 +182,288 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Spring基础注解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-error">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/01/org-springframework-aop-support-DefaultBeanFactoryPointcutAdvisor-0/" class="archive-article-date">
-  	<time datetime="2020-07-31T16:02:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/01/org-springframework-aop-support-DefaultBeanFactoryPointcutAdvisor-0/">&#39;org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0&#39;</a>
+    <h1 class="article-title" itemprop="name">
+      Spring基础注解
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/" class="archive-article-date">
+  	<time datetime="2020-08-02T14:06:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
+</a>
+        
+        
+          <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
+
           
+
+        
+ 
+      </header>
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注解基础概念，Spring基础注解(Spring 2.x)</p>
+<a id="more"></a>
+
+<h1 id="注解基础概念"><a href="#注解基础概念" class="headerlink" title="注解基础概念"></a>注解基础概念</h1><p><strong>什么是注解编程?</strong></p>
+<ul>
+<li>在 类 或者 方法 上加入特定的注解(<font color="red">@xxx</font>),完成特定功能的开发。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XXX</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<strong>为什么要学习注解编程?</strong></li>
+</ul>
+<p>&emsp;1.注解开发方便，代码简单，开发速度大大提高</p>
+<p>&emsp;2.注解开发是Spring开发潮流</p>
+<p>&emsp;Spring 2.x 引入注解，Spring 3.x 完善注解，SpringBoot普及、推广 注解编程。</p>
+<h2 id="注解的作用"><a href="#注解的作用" class="headerlink" title="注解的作用"></a>注解的作用</h2><p>替换 XML这种配置形式，简化配置。</p>
+<img src="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A31.png" class>
+<p>替换接口，实现调用双方的契约性。</p>
+<ul>
+<li>通过注解的方式，在功能调用者和功能提供者之间达成契约，进而进行功能的调用。因为注解的应用更为方便灵活，所以在现在的开发中，更推荐通过注解的方式完成。<img src="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A32.png" class>
+
+</li>
+</ul>
+<h2 id="Spring注解的发展历程"><a href="#Spring注解的发展历程" class="headerlink" title="Spring注解的发展历程"></a>Spring注解的发展历程</h2><p>&emsp;1.Spring 2.x:开始支持注解编程<font color="red">@Component、@Service、@Scope</font>…</p>
+<p>&emsp;目的:提供的这些注解指示为了某些XML的配置，作为XML开发的有意补充。</p>
+<p>&emsp;2.Spring 3.x:<font color="red">@Configuration、@Bean</font>…</p>
+<p>&emsp;目的:彻底替换XML，基于纯注解</p>
+<p>&emsp;3.Spring 4.x <strong>SpringBoot</strong> 提倡使用注解进行开发</p>
+<h1 id="Spring基础注解-Spring-2-x"><a href="#Spring基础注解-Spring-2-x" class="headerlink" title="Spring基础注解(Spring 2.x)"></a>Spring基础注解(Spring 2.x)</h1><p>这个阶段的注解，仅仅是简化XML的配置，并不能完全代替XML。</p>
+<h2 id="对象创建相关注解"><a href="#对象创建相关注解" class="headerlink" title="对象创建相关注解"></a>对象创建相关注解</h2><h3 id="Component"><a href="#Component" class="headerlink" title="@Component"></a>@Component</h3><p>作用:替换原有Springpeizhi文件中的<font color="red">@Bean</font>标签</p>
+<ul>
+<li><p><font color="red">id</font>属性:在<font color="red">@Component</font>中提供了默认的设置方式，首字母小写(UserDAO——&gt;userDAO)</p>
+</li>
+<li><p><font color="red">class</font>属性:通过反射获得的<font color="red">class</font>的内容</p>
+<img src="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A33.png" class>
+<p><font color="red">@Component</font>细节:</p>
+</li>
+<li><p>如何显示指定工厂创建对象的id值</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(<span class="string">"u"</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Spring配置文件覆盖注解配置内容<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">applicationContext.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"user"</span> <span class="attr">class</span>=<span class="string">"com.yusael.bean.User"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"id"</span> <span class="attr">value</span>=<span class="string">"10"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">id值、class值 要和 注解 中配置的一样才会覆盖, </span><br><span class="line">否则 Spring 会创建新的对象。</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### @Repository、@Service、@Contoller</span><br><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>@Repository、@Service、@Controller<span class="tag">&lt;/<span class="name">font</span>&gt;</span> 都是 <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>@Component<span class="tag">&lt;/<span class="name">font</span>&gt;</span> 的 __衍生注解__。</span><br><span class="line"></span><br><span class="line">本质上这些衍生注解就是 <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>@Component<span class="tag">&lt;/<span class="name">font</span>&gt;</span>，通过源码可以看见他们都使用了 <span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">"red"</span>&gt;</span>@Component<span class="tag">&lt;/<span class="name">font</span>&gt;</span>；</span><br><span class="line"></span><br><span class="line">它们的存在是为了:__更加准确的表达一个类型的作用__。</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">@Repository</span><br><span class="line">public class UserDAO &#123;&#125;</span><br><span class="line"></span><br><span class="line">@Service</span><br><span class="line">public class UserService &#123;&#125;</span><br><span class="line"></span><br><span class="line">@Controller</span><br><span class="line">public class UserController &#123;&#125;</span><br></pre></td></tr></table></figure>
+注意:Spring整合Mybatis开发过程中，不使用<font color="red">@Repository、@Component</font></li>
+</ul>
+<h3 id="Scope"><a href="#Scope" class="headerlink" title="@Scope"></a>@Scope</h3><p>作用:控制简单对象创建次数<br>注意:不添加<font color="red">@Scope</font>,Spring提供默认值<font color="red">snigleton</font><br>XMl配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"customer"</span> <span class="attr">class</span> =<span class="string">"com.ltzy.Customer"</span> <span class="attr">scope</span>=<span class="string">"singleton | prototype"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注解:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">创建单例对象</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Scope</span>(<span class="string">"singleton"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Customer</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">创建多例对象</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Scope</span>(<span class="string">"prototype"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Customer</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lazy"><a href="#Lazy" class="headerlink" title="@Lazy"></a>@Lazy</h3><p>作用:延迟创建单例对象<br>注意:一旦使用<font color="red">@Lazy</font>注解后，Spring会在使用这个对象时，再创建这个对象。<br>XML配置:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"account"</span> <span class="attr">class</span>=<span class="string">"com.ltzy.Account"</span> <span class="attr">lazy</span>=<span class="string">"true"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注解:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Lazy</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Account</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Account</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Account.Account"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="生命周期注解-PostConstruct、-PreDestory"><a href="#生命周期注解-PostConstruct、-PreDestory" class="headerlink" title="生命周期注解 @PostConstruct、@PreDestory"></a>生命周期注解 @PostConstruct、@PreDestory</h3><p>初始化相关方法:<font color="red">@PostConstruct</font></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">InitializingBean</span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">init-method</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>销毁方法:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DisposableBean</span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">destory-method</span>=<span class="string">""</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意:</p>
+<ul>
+<li>上述的两个注解并不是Spring提供的，由<strong>JSR(JavaEE规范)520</strong>提供</li>
+<li>再次验证，通过注解实现了接口的锲约性</li>
+</ul>
+<h2 id="注入相关注解"><a href="#注入相关注解" class="headerlink" title="注入相关注解"></a>注入相关注解</h2><h3 id="用于自定义类型-Autowired"><a href="#用于自定义类型-Autowired" class="headerlink" title="用于自定义类型@Autowired"></a>用于自定义类型@Autowired</h3><img src="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A33.png" class>
+
+<h4 id="Autowired细节"><a href="#Autowired细节" class="headerlink" title="@Autowired细节"></a>@Autowired细节</h4><p><font color="red">@Autowird</font>注解 <strong>基于类型进行注入</strong>[推荐]<br>注入对象的类型，必须与目标成员变量类型相同或者是其子类(实现类)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> UserDAO userDAO;</span><br></pre></td></tr></table></figure>
+<p><font color="red">@Autowired、@Qualifier</font>注解联合实现 <strong>基于名字进行注入</strong>[了解]<br>注入对象的id值，必须与<font color="red">@Qualifier</font>注解中设置的名字相同</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="meta">@Qualifier</span>(<span class="string">"userDAOImpl"</span>)</span><br><span class="line"><span class="keyword">private</span> UserDAO userDAO;</span><br></pre></td></tr></table></figure>
+
+<p><font color="red">@Autowired</font>注解放置位置</p>
+<ul>
+<li>放置在对应成员变量的setter方法上，调用setter方法赋值</li>
+<li>直接放置在成员变量上，Spring通过反射直接对成员变量进行赋值[推荐]<br>JavaEE 规范中类似功能的注解</li>
+<li>JSR250提供的<font color="red">@Resoruce(name=”UserDAOImpl”)</font><strong>基于名字进行注入,</strong><br>&emsp;等价于<font color="red">@Autowired</font>与<font color="red">@Qualifier</font> 联合实现的效果<br>&emsp;注意:<font color="red">@Resource</font>注解如果名字没有配对成功，会继续 <strong>按照类型进行注入</strong>.</li>
+<li>JSR330提供的<font color="red">@injection</font>作用与<font color="red">@Autowired</font>完全一样，一般用在EJB3.0中</li>
+</ul>
+<h3 id="JDK类型"><a href="#JDK类型" class="headerlink" title="JDK类型"></a>JDK类型</h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝收款.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信收款.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">错误</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringStudyMVC框架整合思路</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#注解基础概念"><span class="toc-number">1.</span> <span class="toc-text">注解基础概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#注解的作用"><span class="toc-number">1.1.</span> <span class="toc-text">注解的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring注解的发展历程"><span class="toc-number">1.2.</span> <span class="toc-text">Spring注解的发展历程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring基础注解-Spring-2-x"><span class="toc-number">2.</span> <span class="toc-text">Spring基础注解(Spring 2.x)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#对象创建相关注解"><span class="toc-number">2.1.</span> <span class="toc-text">对象创建相关注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Component"><span class="toc-number">2.1.1.</span> <span class="toc-text">@Component</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scope"><span class="toc-number">2.1.2.</span> <span class="toc-text">@Scope</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Lazy"><span class="toc-number">2.1.3.</span> <span class="toc-text">@Lazy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生命周期注解-PostConstruct、-PreDestory"><span class="toc-number">2.1.4.</span> <span class="toc-text">生命周期注解 @PostConstruct、@PreDestory</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注入相关注解"><span class="toc-number">2.2.</span> <span class="toc-text">注入相关注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#用于自定义类型-Autowired"><span class="toc-number">2.2.1.</span> <span class="toc-text">用于自定义类型@Autowired</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Autowired细节"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">@Autowired细节</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK类型"><span class="toc-number">2.2.2.</span> <span class="toc-text">JDK类型</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -255,9 +493,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -329,11 +567,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+                <a href="javascript:void(0)" class="js-tag color4">XML</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -345,15 +587,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">XML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">错误</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">idea快捷键</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
