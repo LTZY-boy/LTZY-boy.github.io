@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/08/27/mybatis-study/mybatis02.png">
 <meta property="og:image" content="http://yoursite.com/2020/08/27/mybatis-study/mybatis01.png">
 <meta property="article:published_time" content="2020-08-27T09:24:57.000Z">
-<meta property="article:modified_time" content="2020-09-04T02:27:54.346Z">
+<meta property="article:modified_time" content="2020-09-06T08:25:43.418Z">
 <meta property="article:author" content="LTZY">
 <meta property="article:tag" content="mybatis">
 <meta name="twitter:card" content="summary">
@@ -672,7 +672,7 @@
 
 
 
-<h3 id="4-trim、where、set"><a href="#4-trim、where、set" class="headerlink" title="4. trim、where、set"></a>4. trim、where、set</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateBlog"</span> <span class="attr">parameterType</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">    update mybatis.blog</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"title != null"</span>&gt;</span></span><br><span class="line">            title = #&#123;title&#125;,</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"author != null"</span>&gt;</span></span><br><span class="line">            author = #&#123;author&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">    where id = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-trim、where、set"><a href="#4-trim、where、set" class="headerlink" title="4. trim、where、set"></a>4. trim、where、set</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateBlog"</span> <span class="attr">parameterType</span>=<span class="string">"map"</span>&gt;</span></span><br><span class="line">    update mybatis.blog</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"title != null"</span>&gt;</span></span><br><span class="line">            title = #&#123;title&#125;,</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"author != null"</span>&gt;</span></span><br><span class="line">            ,author = #&#123;author&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">    where id = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>trim 可以自定义</p>
 <h3 id="SQL片段"><a href="#SQL片段" class="headerlink" title="SQL片段"></a>SQL片段</h3><p>有些时候我们有一些公共部分</p>
@@ -860,6 +860,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/10/04/Ajax%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ajax学习
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/03/Spring/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Spring</div>
@@ -1008,6 +1017,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Ajax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">java基础</a>
               </li>
              
@@ -1024,19 +1041,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">idea快捷键</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">书写规范</a>
+                <a href="javascript:void(0)" class="js-tag color3">idea快捷键</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">书写规范</a>
               </li>
              
               <li class="article-tag-list-item">
