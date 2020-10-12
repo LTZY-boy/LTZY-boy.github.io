@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SpringStudyMVC框架整合思路 | 嘤嘤嘤</title>
+  <title>嘤嘤嘤</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
@@ -25,19 +25,12 @@
     }
   </style>
   
-  <meta name="description" content="MVC框架整合思想、Spring整合MVC框架的核心思路">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SpringStudyMVC框架整合思路">
-<meta property="og:url" content="http://yoursite.com/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="嘤嘤嘤">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
 <meta property="og:site_name" content="嘤嘤嘤">
-<meta property="og:description" content="MVC框架整合思想、Spring整合MVC框架的核心思路">
-<meta property="og:image" content="http://yoursite.com/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/SpringMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%881.png">
-<meta property="article:published_time" content="2020-07-31T16:18:04.000Z">
-<meta property="article:modified_time" content="2020-08-01T17:16:33.009Z">
 <meta property="article:author" content="LTZY">
-<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/SpringMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%881.png">
   
     <link rel="alternative" href="/atom.xml" title="嘤嘤嘤" type="application/atom+xml">
   
@@ -179,20 +172,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SpringStudyMVC框架整合思路" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-md常用语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      SpringStudyMVC框架整合思路
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">md常用语法</a>
     </h1>
   
 
         
-        <a href="/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/" class="archive-article-date">
-  	<time datetime="2020-07-31T16:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
+        <a href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-07-03T07:02:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-03</time>
 </a>
         
         
@@ -201,7 +196,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">938字</span>
+      <span class="post-count">660字</span>
     </span>
   </span>
 
@@ -210,7 +205,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">5分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -224,61 +219,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>MVC框架整合思想、Spring整合MVC框架的核心思路</p>
-<a id="more"></a>
-<h1 id="Spring整合MVC"><a href="#Spring整合MVC" class="headerlink" title="Spring整合MVC"></a>Spring整合MVC</h1><h2 id="MVC-框架整合思想"><a href="#MVC-框架整合思想" class="headerlink" title="MVC 框架整合思想"></a>MVC 框架整合思想</h2><h3 id="为什么要整合-MVC-框架"><a href="#为什么要整合-MVC-框架" class="headerlink" title="为什么要整合 MVC 框架"></a>为什么要整合 MVC 框架</h3><p>&emsp;1.MVC框架提供了控制器(Controller) 调用Servlet<br>&emsp;DAO ————&gt; Service<br>&emsp;2.请求响应的处理<br>&emsp;3.接受请求参数<font color="red">request.getParameter(“”)</font><br>&emsp;4.控制程序的运行流程<br>&emsp;5.视图解析(JSP、JSON、Freemarker、Thymeleaf)</p>
-<h4 id="Spring可以整合哪些MVC框架"><a href="#Spring可以整合哪些MVC框架" class="headerlink" title="Spring可以整合哪些MVC框架?"></a>Spring可以整合哪些MVC框架?</h4><p>&emsp;1.struts1<br>&emsp;2.webwork<br>&emsp;3.jsf<br>&emsp;4.struts2<br>&emsp;5.springMVC</p>
-<h3 id="搭建-Web-运行环境"><a href="#搭建-Web-运行环境" class="headerlink" title="搭建 Web 运行环境"></a>搭建 Web 运行环境</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.14.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.14.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-beans<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.14.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-aop<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.14.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjrt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.8<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.aspectj<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>aspectjweaver<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.8.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>8.0.16<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.slf4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>slf4j-log4j12<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7.25<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jstl<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>javax.servlet.jsp<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>javax.servlet.jsp-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="Spring整合MVC-框架的核心思路"><a href="#Spring整合MVC-框架的核心思路" class="headerlink" title="Spring整合MVC 框架的核心思路"></a>Spring整合MVC 框架的核心思路</h2><h3 id="1-准备工厂"><a href="#1-准备工厂" class="headerlink" title="1.准备工厂"></a>1.准备工厂</h3><p><strong>Web 开发过程中供如何建厂?</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext ctx &#x3D; new WebXmlApplicationCotenxt(&quot;&#x2F;applicationContext.xml&quot;);</span><br></pre></td></tr></table></figure>
-
-<p><strong>如何保证工厂唯一，同时被共用?</strong></p>
-<ul>
-<li>共用:工厂存储在<font color="red">ServletContext</font>这个作用域中，<font color="red">ServletContext.setAttribute(“xxx”,ctx);</font></li>
-<li>唯一:在<font color="red">ServletContext</font>对象创建的同时创建工厂，<font color="red">ServletContextListener</font>在<font color="red">ServletContext</font>对象创建的同时，被调用(只会被调用一次),把创建工厂的代码写在<font color="red">ServletContextListern</font>中，也会保证只调用一次，保证工厂的唯一性。</li>
-</ul>
-<p><strong>Spring封装了一个<font color="red">ContextLoaderListener</font>,主要做了两件事:</strong><br>&emsp;1.创建工厂<br>&emsp;2.把工厂存在<font color="red">ServletContext</font><br><font color="red">ContextLoaderListener</font>使用方式:web.xml中</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">listener-class</span>&gt;</span> org.springframework.web.context.ContextLoaderListener <span class="tag">&lt;/<span class="name">listen-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span> contextConfigLocation <span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-value</span>&gt;</span> classpath:applicationContext.xml <span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-代码整合"><a href="#2-代码整合" class="headerlink" title="2.代码整合"></a>2.代码整合</h3><img src="/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/SpringMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%881.png" class>
-
-<h2 id="Spring整合sturts2"><a href="#Spring整合sturts2" class="headerlink" title="Spring整合sturts2"></a>Spring整合sturts2</h2><p>struts2用的不多,暂时不学</p>
-
+        <p>md文件书写规范</p>
+        
+          <a class="article-more-a" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#more">more >></a>
+        
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/支付宝收款.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/img/微信收款.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -289,7 +235,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">书写规范</a>
         		</li>
       		
 		</ul>
@@ -298,84 +244,16 @@
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/03/md%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/01/SpringStudyMVC%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88%E6%80%9D%E8%B7%AF/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/08/02/Spring%E5%9F%BA%E7%A1%80%E6%B3%A8%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Spring基础注解
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/08/01/org-springframework-aop-support-DefaultBeanFactoryPointcutAdvisor-0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">&#39;org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0&#39;</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -390,32 +268,17 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring整合MVC"><span class="toc-number">1.</span> <span class="toc-text">Spring整合MVC</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MVC-框架整合思想"><span class="toc-number">1.1.</span> <span class="toc-text">MVC 框架整合思想</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么要整合-MVC-框架"><span class="toc-number">1.1.1.</span> <span class="toc-text">为什么要整合 MVC 框架</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Spring可以整合哪些MVC框架"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">Spring可以整合哪些MVC框架?</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建-Web-运行环境"><span class="toc-number">1.1.2.</span> <span class="toc-text">搭建 Web 运行环境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring整合MVC-框架的核心思路"><span class="toc-number">1.2.</span> <span class="toc-text">Spring整合MVC 框架的核心思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-准备工厂"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.准备工厂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-代码整合"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.代码整合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring整合sturts2"><span class="toc-number">1.3.</span> <span class="toc-text">Spring整合sturts2</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
 
-  
-  
-  
 
   
-
   
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    </nav>
   
 
 
@@ -445,8 +308,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
